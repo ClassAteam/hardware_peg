@@ -10,6 +10,7 @@ CONFIG += c++11
 
 SOURCES += \
     aircondition_int.cpp \
+    anothersystem_int.cpp \
     interfacing.cpp \
     main.cpp
 
@@ -19,6 +20,7 @@ HEADERS += \
     Struct_FromRmiPilot.h \
     Struct_ToRmiNavig.h \
     aircondition_int.h \
+    anothersystem_int.h \
     interfacing.h
 
 # Default rules for deployment.

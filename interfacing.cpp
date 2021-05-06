@@ -1,5 +1,8 @@
 #include "interfacing.h"
 
+QSharedMemory interfacing::SHARE_ADVANTECH(SHARED_MEMORY_DEVICE_CONNECT);
+SH_DEVICE_CONNECT interfacing::DEVICE_CONNECT{};
+SH_DEVICE_CONNECT* interfacing::pDev = &interfacing::DEVICE_CONNECT;
 
 int interfacing::mmrCount{};
 QElapsedTimer timing;
@@ -7,7 +10,7 @@ QElapsedTimer timing;
 
 interfacing::interfacing(QWidget *parent)
     : QWidget(parent), btnID{0}, slID{0}, lblClueID{0},row{0}, column{0},
-       rbGroupID{0}, rbID{0}, rbMappedValue{0}, SHARE_ADVANTECH(SHARED_MEMORY_DEVICE_CONNECT)
+       rbGroupID{0}, rbID{0}, rbMappedValue{0}
 {
     layout_buttons = new QGridLayout(this);
     this->setLayout(layout_buttons);
@@ -43,14 +46,20 @@ interfacing::interfacing(QWidget *parent)
 
     if(mmrCount == 0)
     {
+        SHARE_ADVANTECH.setKey(SHARED_MEMORY_DEVICE_CONNECT);
         if(!SHARE_ADVANTECH.create(sizeof(DEVICE_CONNECT))) {
             qDebug() << "unable to create shared memory";
             return;
         }
+        else
+        {
+            mmrCount++;
+        }
     }
     else
     {
-        SHARE_ADVANTECH.attach();
+//        SHARE_ADVANTECH.setKey(SHARED_MEMORY_DEVICE_CONNECT);
+//        SHARE_ADVANTECH.attach();
     }
 
 }
@@ -160,7 +169,6 @@ void interfacing::m_RedButton2(int value)
 }
 void interfacing::setLbl()
 {
-    updMmrState();
 
     for(int i = 0; i < lblsPoolClue.count(); i++)
     {

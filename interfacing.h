@@ -61,9 +61,9 @@ public:
 
     //shared memory
     static int mmrCount;
-    QSharedMemory SHARE_ADVANTECH;
-    SH_DEVICE_CONNECT DEVICE_CONNECT;
-    SH_DEVICE_CONNECT *pDev = &DEVICE_CONNECT;
+    static QSharedMemory SHARE_ADVANTECH;
+    static SH_DEVICE_CONNECT DEVICE_CONNECT;
+    static SH_DEVICE_CONNECT *pDev;
 
 
 signals:
@@ -82,7 +82,7 @@ public slots:
     void setSlV(int);
     void setRB(const QString);
     void trigerButton();
-    void updMmrState();
     virtual void updateSmth();
+    static void updMmrState();
 };
 

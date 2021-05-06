@@ -10,4 +10,5 @@ aircondition_int::aircondition_int(QWidget *parent)
 
 void aircondition_int::updateSmth()
 {
+    interfacing::updMmrState();
 }
