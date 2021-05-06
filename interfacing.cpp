@@ -1,6 +1,7 @@
 #include "interfacing.h"
 
 
+int interfacing::mmrCount{};
 QElapsedTimer timing;
 
 
@@ -40,8 +41,16 @@ interfacing::interfacing(QWidget *parent)
     connect(this, SIGNAL(rbClicked(const QString)), this, SLOT(setRB(const QString)));
 //    this->setStyleSheet("QLabel {color: green}"); //would be very expensive
 
-    if(!SHARE_ADVANTECH.create(sizeof(DEVICE_CONNECT))) {
-        qDebug() << "unable to create shared memory";
+    if(mmrCount == 0)
+    {
+        if(!SHARE_ADVANTECH.create(sizeof(DEVICE_CONNECT))) {
+            qDebug() << "unable to create shared memory";
+            return;
+        }
+    }
+    else
+    {
+        SHARE_ADVANTECH.attach();
     }
 
 }

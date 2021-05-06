@@ -60,6 +60,7 @@ public:
     void posOcupied();
 
     //shared memory
+    static int mmrCount;
     QSharedMemory SHARE_ADVANTECH;
     SH_DEVICE_CONNECT DEVICE_CONNECT;
     SH_DEVICE_CONNECT *pDev = &DEVICE_CONNECT;
