@@ -259,7 +259,13 @@ void interfacing::updMmrState()
 {
     SHARE_ADVANTECH.lock();
     pDev = static_cast<SH_DEVICE_CONNECT*>(SHARE_ADVANTECH.data());
-    *pDev = DEVICE_CONNECT;
+    for(int i = 0; i < MAT_UDI_UDO; i ++)
+    {
+        pDev->IN_MAT[i] = DEVICE_CONNECT.IN_MAT[i];
+        DEVICE_CONNECT.OUT_D = pDev->OUT_D[i];
+    }
+    *pDev->IN_MAT = *DEVICE_CONNECT.IN_MAT;
+    *DEVICE_CONNECT.OUT_D = pDev->OUT_D;
     SHARE_ADVANTECH.unlock();
 }
 void interfacing::trigerButton()

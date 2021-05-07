@@ -9,19 +9,19 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    aircondition_int.cpp \
-    anothersystem_int.cpp \
+    inmat_int.cpp \
     interfacing.cpp \
-    main.cpp
+    main.cpp \
+    outd_int.cpp
 
 HEADERS += \
     Struct_DeviceConnect.h \
     Struct_FromRmiOper.h \
     Struct_FromRmiPilot.h \
     Struct_ToRmiNavig.h \
-    aircondition_int.h \
-    anothersystem_int.h \
-    interfacing.h
+    inmat_int.h \
+    interfacing.h \
+    outd_int.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

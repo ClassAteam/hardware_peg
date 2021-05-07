@@ -12,6 +12,19 @@
 #include "Struct_ToRmiNavig.h"
 
 #define SHARED_MEMORY_DEVICE_CONNECT "Struct_DEVICE_CONNECT"
+#define N1758UDI  3
+#define N1758UDO  7
+#define N1724     3
+#define N1715     1
+#define N1747     3
+
+#define KANAL_1758UDI  128
+#define KANAL_1758UDO  128
+#define KANAL_1724     32
+#define KANAL_1715     32
+#define KANAL_1747     64
+
+#define MAT_UDI_UDO   1280
 
 
 const double TICK = 2.0;

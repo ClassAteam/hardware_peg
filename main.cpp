@@ -1,13 +1,13 @@
 #include <QApplication>
-#include "aircondition_int.h"
-#include "anothersystem_int.h"
+#include "inmat_int.h"
+#include "outd_int.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    aircondition_int aircondition;
+    inmat_int aircondition;
     aircondition.show();
-    anothersystem_int anothersystem;
+    outD_int anothersystem;
     anothersystem.show();
     return a.exec();
 }
