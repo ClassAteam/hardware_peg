@@ -262,10 +262,11 @@ void interfacing::updMmrState()
     for(int i = 0; i < MAT_UDI_UDO; i ++)
     {
         pDev->IN_MAT[i] = DEVICE_CONNECT.IN_MAT[i];
-        DEVICE_CONNECT.OUT_D = pDev->OUT_D[i];
     }
-    *pDev->IN_MAT = *DEVICE_CONNECT.IN_MAT;
-    *DEVICE_CONNECT.OUT_D = pDev->OUT_D;
+    for(int i = 0; i < KANAL_1758UDO; ++i)
+    {
+        DEVICE_CONNECT.OUT_D[1][i] = pDev->OUT_D[1][i];
+    }
     SHARE_ADVANTECH.unlock();
 }
 void interfacing::trigerButton()
