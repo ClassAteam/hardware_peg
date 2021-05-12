@@ -265,7 +265,7 @@ void interfacing::updMmrState()
     }
     for(int i = 0; i < KANAL_1758UDO; ++i)
     {
-        DEVICE_CONNECT.OUT_D[1][i] = pDev->OUT_D[1][i];
+        DEVICE_CONNECT.OUT_D[2][i] = pDev->OUT_D[2][i];
     }
     SHARE_ADVANTECH.unlock();
 }
