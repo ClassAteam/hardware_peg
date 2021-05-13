@@ -5,9 +5,9 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    inmat_int aircondition;
-    aircondition.show();
-    outD_int anothersystem;
-    anothersystem.show();
+    outD_int out_int;
+    out_int.show();
+    power power_int;
+    power_int.show();
     return a.exec();
 }

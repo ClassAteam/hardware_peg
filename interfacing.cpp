@@ -4,7 +4,13 @@ QSharedMemory interfacing::SHARE_ADVANTECH(SHARED_MEMORY_DEVICE_CONNECT);
 SH_DEVICE_CONNECT interfacing::DEVICE_CONNECT{};
 SH_DEVICE_CONNECT* interfacing::pDev = &interfacing::DEVICE_CONNECT;
 
-int interfacing::mmrCount{};
+QSharedMemory interfacing::SHARE_RMI_PILOT(SHARED_MEMORY_RMI_PIL);
+SH_FROMRMI_PILOT interfacing::RMI_PILOT_CONNECT{};
+SH_FROMRMI_PILOT* interfacing::pPlt = &interfacing::RMI_PILOT_CONNECT;
+
+
+int interfacing::mmrDevCount{};
+int interfacing::mmrRmiPilCount{};
 QElapsedTimer timing;
 
 
@@ -44,22 +50,24 @@ interfacing::interfacing(QWidget *parent)
     connect(this, SIGNAL(rbClicked(const QString)), this, SLOT(setRB(const QString)));
 //    this->setStyleSheet("QLabel {color: green}"); //would be very expensive
 
-    if(mmrCount == 0)
+    if(mmrDevCount == 0)
     {
         SHARE_ADVANTECH.setKey(SHARED_MEMORY_DEVICE_CONNECT);
         if(!SHARE_ADVANTECH.create(sizeof(DEVICE_CONNECT))) {
-            qDebug() << "unable to create shared memory";
+            qDebug() << "unable to create shared memory dev";
             return;
         }
-        else
-        {
-            mmrCount++;
-        }
+        else mmrDevCount++;
     }
-    else
+
+    if(mmrRmiPilCount == 0)
     {
-//        SHARE_ADVANTECH.setKey(SHARED_MEMORY_DEVICE_CONNECT);
-//        SHARE_ADVANTECH.attach();
+        SHARE_RMI_PILOT.setKey(SHARED_MEMORY_RMI_PIL);
+        if(!SHARE_RMI_PILOT.create(sizeof(RMI_PILOT_CONNECT))) {
+            qDebug() << "unable to create shared memory rmi_pil";
+            return;
+        }
+        else mmrRmiPilCount++;
     }
 
 }
@@ -69,7 +77,7 @@ void interfacing::createRedButton(bool* clue, QString name)
     QPushButton *button = new QPushButton(name);
 //    button->setFixedHeight(40);
 //    button->setFixedWidth(150);
-    button->setStyleSheet("max-width: 10em");
+//    button->setStyleSheet("max-width: 10em");
     layout_buttons->addWidget(button, row, column);
     posOcupied();
     button->setFont(*btnFont);
@@ -89,6 +97,17 @@ void interfacing::createLabelClue(bool* clue, QString name)
     lblClues.append(clue);
     lblClueID++;
     lblsPoolClue.append(label);
+
+}
+
+void interfacing::createSign(QString name)
+{
+    QLabel *label = new QLabel(name);
+    layout_buttons->addWidget(label, row, column);
+    label->setFixedHeight(30);
+    label->setStyleSheet("color: green;"
+                         "font: bold 14px;");
+    posOcupied();
 
 }
 
@@ -156,15 +175,12 @@ void interfacing::m_RedButton2(int value)
     if(pressed == false)
     {
         *btnClues[value] = true;
-        button->setStyleSheet("background-color: red;"
-                              "border-width: 2px;"
-                              "border-color: black;"
-                                 "max-width: 10em;");
+        button->setStyleSheet("background-color: red;");
     }
     if(pressed == true)
     {
         *btnClues[value] = false;
-        button->setStyleSheet("max-width: 10em");
+        button->setStyleSheet("");
    }
 }
 void interfacing::setLbl()
@@ -255,19 +271,72 @@ void interfacing::posOcupied()
         column++;
     }
 }
+void interfacing::newColumn()
+{
+    row = 0;
+    column++;
+}
 void interfacing::updMmrState()
 {
     SHARE_ADVANTECH.lock();
     pDev = static_cast<SH_DEVICE_CONNECT*>(SHARE_ADVANTECH.data());
+
+    //IN_MAT
     for(int i = 0; i < MAT_UDI_UDO; i ++)
     {
         pDev->IN_MAT[i] = DEVICE_CONNECT.IN_MAT[i];
     }
-    for(int i = 0; i < KANAL_1758UDO; ++i)
+    //IN_D
+    for(int i = 0; i < N1758UDI; ++i)
     {
-        DEVICE_CONNECT.OUT_D[2][i] = pDev->OUT_D[2][i];
+        for(int y = 0; y < KANAL_1758UDI; ++y)
+        {
+            pDev->IN_D[i][y] = DEVICE_CONNECT.IN_D[i][y];
+        }
+    }
+    //IN_A
+    for(int i = 0; i < N1747; ++i)
+    {
+        for(int y = 0; y < KANAL_1747; ++y)
+        {
+            pDev->IN_A[i][y] = DEVICE_CONNECT.IN_A[i][y];
+        }
+    }
+    //IN_A15
+    for(int i = 0; i < N1715; ++i)
+    {
+        for(int y = 0; y < KANAL_1715; ++y)
+        {
+            pDev->IN_A15[i][y] = DEVICE_CONNECT.IN_A15[i][y];
+        }
+    }
+    //OUT_D
+    for(int i = 0; i < N1758UDO; ++i)
+    {
+        for(int y = 0; y < KANAL_1758UDO; ++y)
+        {
+            DEVICE_CONNECT.OUT_D[i][y] = pDev->OUT_D[i][y];
+        }
+    }
+    //OUT_A
+    for(int i = 0; i < N1747; ++i)
+    {
+        for(int y = 0; y < KANAL_1747; ++y)
+        {
+            DEVICE_CONNECT.OUT_A[i][y] = pDev->OUT_A[i][y];
+        }
     }
     SHARE_ADVANTECH.unlock();
+
+    SHARE_RMI_PILOT.lock();
+    pPlt = static_cast<SH_FROMRMI_PILOT*>(SHARE_RMI_PILOT.data());
+    //Otkaz
+    for(int i = 0; i < NUM_PILOT_OTKAZ; ++i)
+        pPlt->Otkaz[i] = RMI_PILOT_CONNECT.Otkaz[i];
+
+    pPlt->bRMI_ALL = RMI_PILOT_CONNECT.bRMI_ALL;
+
+    SHARE_RMI_PILOT.unlock();
 }
 void interfacing::trigerButton()
 {
