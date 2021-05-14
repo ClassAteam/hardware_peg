@@ -77,7 +77,6 @@ void interfacing::createRedButton(bool* clue, QString name)
     QPushButton *button = new QPushButton(name);
 //    button->setFixedHeight(40);
 //    button->setFixedWidth(150);
-//    button->setStyleSheet("max-width: 10em");
     layout_buttons->addWidget(button, row, column);
     posOcupied();
     button->setFont(*btnFont);
@@ -92,7 +91,7 @@ void interfacing::createLabelClue(bool* clue, QString name)
 {
     QLabel *label = new QLabel(name);
     layout_buttons->addWidget(label, row, column);
-    label->setStyleSheet("max-width: 10em;");
+    label->setStyleSheet("max-width: 20em;");
     posOcupied();
     lblClues.append(clue);
     lblClueID++;
@@ -263,7 +262,7 @@ void interfacing::setRB(const QString str)
 
 void interfacing::posOcupied()
 {
-    if(row < 45)
+    if(row < 80)
         row++;
     else
     {

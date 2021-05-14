@@ -7,8 +7,6 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    outD_int out_int;
-    out_int.show();
     power power_int;
     power_int.show();
     return a.exec();
