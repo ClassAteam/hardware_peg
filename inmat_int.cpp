@@ -30,67 +30,88 @@ power::power(QWidget *parent)
     newColumn();
 
     createSign("SIO");
-    createRedButton(&DEVICE_CONNECT.IN_MAT[556], "ГЕН ВСУ (сеть 27)");
     //s1_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[531], "Г1 (сеть 27)");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[556], "ГЕН ВСУ (сеть 27)");
     //s4_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[535], "Г2");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[531], "Г1");
     //s5_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[535], "Г3");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[535], "Г2");
     //s8_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[547], "Г4");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[543], "Г3");
     //s11_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[529], "РАП1");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[547], "Г4");
     //s2_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[541], "РАП2");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[529], "РАП1");
     //s9_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[537], "АКК1");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[541], "РАП2");
     //s14_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[561], "АКК2");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[537], "АКК1");
     //s15_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[549], "СОЕД СЕТЕЙ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[561], "АКК2");
     //s7_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[523], "ЗЕМЛЯ - ВОЗДУХ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[549], "СОЕД СЕТЕЙ");
     //s13_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[546], "ЧАСТИЧНЫЙ РЕЖИМ (сеть 27В лев)");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[523], "ЗЕМЛЯ - ВОЗДУХ");
+    //s3_2430
+    createRedButton(&DEVICE_CONNECT.IN_MAT[533], "ЧАСТИЧНЫЙ РЕЖИМ (сеть 27В лев)");
     //s10_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[577], "Переключатель вольтметра");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[545], "ЧАСТИЧНЫЙ РЕЖИМ (сеть 27В прав)");
     //s16_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[525], "Переключатель амперметра");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[576], "Вольтметр: АКК1");
+    //s16_2430
+    createRedButton(&DEVICE_CONNECT.IN_MAT[577], "Вольтметр: АКК2");
+    //s16_2430
+    createRedButton(&DEVICE_CONNECT.IN_MAT[578], "Вольтметр: Сеть АВАР1");
+    //s16_2430
+    createRedButton(&DEVICE_CONNECT.IN_MAT[579], "Вольтметр: Сеть АВАР2");
+    //s16_2430
+    createRedButton(&DEVICE_CONNECT.IN_MAT[580], "Вольтметр: Шина 1 ЛЕВ СЕТЬ");
+    //s16_2430
+    createRedButton(&DEVICE_CONNECT.IN_MAT[581], "Вольтметр: Шина 2 ЛЕВ СЕТЬ");
+    //s16_2430
+    createRedButton(&DEVICE_CONNECT.IN_MAT[582], "Вольтметр: Шина 1 ПРАВ СЕТЬ");
+    //s16_2430
+    createRedButton(&DEVICE_CONNECT.IN_MAT[583], "Вольтметр: Шина 2 ПРАВ СЕТЬ");
     //s17_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[748], "Главынй выключатель ВСУ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[525], "Амперметр: АКК1 РАП1");
+    //s17_2430
+    createRedButton(&DEVICE_CONNECT.IN_MAT[526], "Амперметр: АКК2 РАП2");
+    //s17_2430
+    createRedButton(&DEVICE_CONNECT.IN_MAT[527], "Амперметр: ");
     //s5-pp73
-    createRedButton(&DEVICE_CONNECT.IN_MAT[196], "ЭСУД СКУ1");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[748], "Главынй выключатель ВСУ");
     //s1_7710
-    createRedButton(&DEVICE_CONNECT.IN_MAT[197], "ЭСУД СКУ2");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[196], "ЭСУД СКУ1");
     //s2_7710
-    createRedButton(&DEVICE_CONNECT.IN_MAT[198], "ЭСУД СКУ3");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[197], "ЭСУД СКУ2");
     //s3_7710
-    createRedButton(&DEVICE_CONNECT.IN_MAT[199], "ЭСУД СКУ4");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[198], "ЭСУД СКУ3");
     //s4_7710
-    createRedButton(&DEVICE_CONNECT.IN_MAT[520], "ГЕН1");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[199], "ЭСУД СКУ4");
     //s1_2420
-    createRedButton(&DEVICE_CONNECT.IN_MAT[565], "ГЕН2");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[520], "ГЕН1");
     //s5_2420
-    createRedButton(&DEVICE_CONNECT.IN_MAT[568], "ГЕН3");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[565], "ГЕН2");
     //s10_2420
-    createRedButton(&DEVICE_CONNECT.IN_MAT[575], "ГЕН4");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[568], "ГЕН3");
     //s13_2420
-    createRedButton(&DEVICE_CONNECT.IN_MAT[522], "ЧАСТИЧНЫЙ РЕЖИМ СЕТЬ ЛЕВАЯ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[575], "ГЕН4");
     //s4_2420
-    createRedButton(&DEVICE_CONNECT.IN_MAT[567], "ЧАСТИЧНЫЙ РЕЖИМ СЕТЬ ПРАВАЯ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[522], "ЧАСТИЧНЫЙ РЕЖИМ СЕТЬ ЛЕВАЯ");
     //s12_2420
-    createRedButton(&DEVICE_CONNECT.IN_MAT[549], "ВСУ ГЕН ВСУ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[567], "ЧАСТИЧНЫЙ РЕЖИМ СЕТЬ ПРАВАЯ");
     //s8_2420
-    createRedButton(&DEVICE_CONNECT.IN_MAT[557], "СЕТЬ 115/200В СОЕДИН СЕТЕЙ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[549], "ВСУ ГЕН ВСУ");
     //s2_2420
-    createRedButton(&DEVICE_CONNECT.IN_MAT[555], " СЕТЬ 115/200В РАП");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[557], "СЕТЬ 115/200В СОЕДИН СЕТЕЙ");
     //s9_2420
-    createRedButton(&DEVICE_CONNECT.IN_MAT[592], "ПТС ПРЕОБР 1");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[555], " СЕТЬ 115/200В РАП");
     //s15_2420
-    createRedButton(&DEVICE_CONNECT.IN_MAT[594], "ПОС1000");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[592], "ПТС ПРЕОБР 1");
     //s21_2420
+    createRedButton(&DEVICE_CONNECT.IN_MAT[594], "ПОС1000");
     newColumn();
+
     createSign("RMI_PILOT");
     createRedButton(&RMI_PILOT_CONNECT.bRMI_ALL, "Начальные условия");
     createRedButton(&RMI_PILOT_CONNECT.Otkaz[20], "отказ генератора постоянного тока 1");
@@ -143,13 +164,13 @@ power::power(QWidget *parent)
     //BSS837X2T
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][25], "ОТКЛЮЧИ Г4");
     //BSS926X2a
-    createLabelClue(&DEVICE_CONNECT.OUT_D[2][13], "ОТК Г1");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[2][13], "ОТКЛ Г1");
     //BSS926X2c
-    createLabelClue(&DEVICE_CONNECT.OUT_D[2][22], "ОТК Г2");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[2][16], "ОТКЛ Г2");
     //BSS837X2Y
-    createLabelClue(&DEVICE_CONNECT.OUT_D[2][23], "ОТК Г3");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[2][23], "ОТКЛ Г3");
     //BSS837X2U
-    createLabelClue(&DEVICE_CONNECT.OUT_D[2][26], "ОТК Г4");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[2][26], "ОТКЛ Г4");
     //BSS926X2j
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][28], "ВКЛ (ГЕН ВСУ)");
     //BSS837X2N
@@ -173,7 +194,7 @@ power::power(QWidget *parent)
     //BSS838X6G
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][41], "ОТКЛЮЧИ ППО2");
     //BSS837X2p
-    createLabelClue(&DEVICE_CONNECT.OUT_D[2][32], "ОТКЛЮЧИ ППО3");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[2][48], "ОТКЛЮЧИ ППО3");
     //BSS837X2i
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][50], "ОТКЛЮЧИ ППО4");
     //BSS926X2q
@@ -183,19 +204,19 @@ power::power(QWidget *parent)
     //BSS837X2d
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][56], "ВКЛ (ГЕН ВСУ СЕТЬ 115/200 В)");
     //BSS838X6D
-    createLabelClue(&DEVICE_CONNECT.OUT_D[2][40], "ОТКЛЮЧИ ППО1");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[2][40], "ППО1 ОТКЛ");
     //BSS838X6H
-    createLabelClue(&DEVICE_CONNECT.OUT_D[2][42], "ОТКЛЮЧИ ППО2");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[2][42], "ППО2 ОТКЛ");
     //BSS837X2q
-    createLabelClue(&DEVICE_CONNECT.OUT_D[2][22], "ОТКЛЮЧИ ППО3");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[2][49], "ППО3 ОТКЛ");
     //BSS837X2j
-    createLabelClue(&DEVICE_CONNECT.OUT_D[2][51], "ОТКЛЮЧИ ППО4");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[2][51], "ППО4 ОТКЛ");
     //BSS838X6B
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][38], "ОТКЛ (ГЕН1)");
     //BSS838X6F
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][44], "ОТКЛ (ГЕН2)");
     //BSS837X2n
-    createLabelClue(&DEVICE_CONNECT.OUT_D[2][22], "ОТКЛ (ГЕН3)");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[2][47], "ОТКЛ (ГЕН3)");
     //BSS837X2h
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][53], "ОТКЛ (ГЕН4)");
     //BSS838X6A
@@ -203,7 +224,7 @@ power::power(QWidget *parent)
     //BSS838X6E
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][43], "ОТКЛЮЧИ (ГЕН2)");
     //BSS837X2m
-    createLabelClue(&DEVICE_CONNECT.OUT_D[2][22], "ОТКЛЮЧИ (ГЕН3)");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[2][46], "ОТКЛЮЧИ (ГЕН3)");
     //BSS837X2g
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][52], "ОТКЛЮЧИ (ГЕН4)");
     //BSS837X2b
@@ -214,7 +235,7 @@ power::power(QWidget *parent)
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][59], "ПЕРЕГРУЗ (ГЕН3)");
     //BSS837X2f
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][60], "ПЕРЕГРУЗ (ГЕН4)");
-    //BSS926X2p
+    //BSS926X2P
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][36], "ВКЛ (ЧАСТИЧН РЕЖИМ ЛЕВАЯ СЕТЬ 115/200В");
     //BSS837X2e
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][45], "ВКЛ (ЧАСТИЧН РЕЖИМ ПРАВАЯ СЕТЬ 115/200В");
