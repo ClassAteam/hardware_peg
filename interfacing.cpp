@@ -8,9 +8,14 @@ QSharedMemory interfacing::SHARE_RMI_PILOT(SHARED_MEMORY_RMI_PIL);
 SH_FROMRMI_PILOT interfacing::RMI_PILOT_CONNECT{};
 SH_FROMRMI_PILOT* interfacing::pPlt = &interfacing::RMI_PILOT_CONNECT;
 
+QSharedMemory interfacing::SHARE_ISU(SHARED_MEMORY_ISU);
+SH_ISU interfacing::ISU_CONNECT{};
+SH_ISU* interfacing::pISU = &interfacing::ISU_CONNECT;
+
 
 int interfacing::mmrDevCount{};
 int interfacing::mmrRmiPilCount{};
+int interfacing::mmrISUCount{};
 QElapsedTimer timing;
 
 
@@ -68,6 +73,16 @@ interfacing::interfacing(QWidget *parent)
             return;
         }
         else mmrRmiPilCount++;
+    }
+
+    if(mmrISUCount == 0)
+    {
+        SHARE_ISU.setKey(SHARED_MEMORY_ISU);
+        if(!SHARE_ISU.create(sizeof(ISU_CONNECT))) {
+            qDebug() << "unable to create shared memory ISU";
+            return;
+        }
+        else mmrISUCount++;
     }
 
 }
@@ -328,15 +343,24 @@ void interfacing::updMmrState()
     }
     SHARE_ADVANTECH.unlock();
 
+    //RMI_PILOT
     SHARE_RMI_PILOT.lock();
     pPlt = static_cast<SH_FROMRMI_PILOT*>(SHARE_RMI_PILOT.data());
-    //Otkaz
     for(int i = 0; i < NUM_PILOT_OTKAZ; ++i)
         pPlt->Otkaz[i] = RMI_PILOT_CONNECT.Otkaz[i];
 
     pPlt->bRMI_ALL = RMI_PILOT_CONNECT.bRMI_ALL;
 
     SHARE_RMI_PILOT.unlock();
+
+    //ISU
+    SHARE_ISU.lock();
+    pISU = static_cast<SH_ISU*>(SHARE_ISU.data());
+    pISU->nvd1 = ISU_CONNECT.nvd1;
+    pISU->nvd2 = ISU_CONNECT.nvd2;
+    pISU->nvd3 = ISU_CONNECT.nvd3;
+    pISU->nvd4 = ISU_CONNECT.nvd4;
+    SHARE_ISU.unlock();
 }
 void interfacing::trigerButton()
 {

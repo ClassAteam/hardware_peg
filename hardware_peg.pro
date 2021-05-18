@@ -18,6 +18,7 @@ HEADERS += \
     Struct_DeviceConnect.h \
     Struct_FromRmiOper.h \
     Struct_FromRmiPilot.h \
+    Struct_ISU.h \
     Struct_ToRmiNavig.h \
     inmat_int.h \
     interfacing.h \

@@ -10,7 +10,9 @@
 #include "Struct_FromRmiOper.h"
 #include "Struct_FromRmiPilot.h"
 #include "Struct_ToRmiNavig.h"
+#include "Struct_ISU.h"
 
+#define SHARED_MEMORY_ISU "ISU_CONNECT"
 #define SHARED_MEMORY_RMI_PIL "RMI_PIL"
 #define SHARED_MEMORY_DEVICE_CONNECT "Struct_DEVICE_CONNECT"
 #define N1758UDI  3
@@ -86,6 +88,12 @@ public:
     static QSharedMemory SHARE_RMI_PILOT;
     static SH_FROMRMI_PILOT RMI_PILOT_CONNECT;
     static SH_FROMRMI_PILOT *pPlt;
+
+    //shared memory ISU
+    static int mmrISUCount;
+    static QSharedMemory SHARE_ISU;
+    static SH_ISU ISU_CONNECT;
+    static SH_ISU *pISU;
 
 signals:
     int digitClicked(int);

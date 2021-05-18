@@ -16,6 +16,19 @@ power::power(QWidget *parent)
     power::setWindowTitle("Power");
 //    createRedButton(&DEVICE_CONNECT.IN_MAT[538], "IN_MAT_538");
 //    createRedButton(&DEVICE_CONNECT.IN_MAT[550], "IN_MAT_550");
+    createSign("ISU");
+    createLabelValue(&ISU_CONNECT.nvd1, "ДВИГ1");
+    createSlider(&ISU_CONNECT.nvd1, 0, 100);
+    createLabelValue(&ISU_CONNECT.nvd2, "ДВИГ2");
+    createSlider(&ISU_CONNECT.nvd2, 0, 100);
+    createLabelValue(&ISU_CONNECT.nvd3, "ДВИГ3");
+    createSlider(&ISU_CONNECT.nvd3, 0, 100);
+    createLabelValue(&ISU_CONNECT.nvd4, "ДВИГ4");
+    createSlider(&ISU_CONNECT.nvd4, 0, 100);
+    createLabelValue(&ISU_CONNECT.nvdVsu, "ВСУ");
+    createSlider(&ISU_CONNECT.nvdVsu, 0, 100);
+    newColumn();
+
     createSign("SIO");
     createRedButton(&DEVICE_CONNECT.IN_MAT[556], "ГЕН ВСУ (сеть 27)");
     //s1_2430
