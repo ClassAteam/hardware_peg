@@ -27,7 +27,7 @@ interfacing::interfacing(QWidget *parent)
     this->setWindowState(Qt::WindowFullScreen);
     //fonts
     btnFont = new QFont("Courier", 12, QFont::Bold);
-    lblClueFontAct = new QFont("Time", 12, QFont::Bold);
+    lblClueFontAct = new QFont("Time", 8, QFont::Bold);
     lblClueFontInact = new QFont("Time", 8, QFont::Bold);
     //buttons
     signalMapperBtns = new QSignalMapper(this);
@@ -77,6 +77,7 @@ void interfacing::createRedButton(bool* clue, QString name)
     QPushButton *button = new QPushButton(name);
 //    button->setFixedHeight(40);
 //    button->setFixedWidth(150);
+    button->setStyleSheet("max-width: 45em;");
     layout_buttons->addWidget(button, row, column);
     posOcupied();
     button->setFont(*btnFont);

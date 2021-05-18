@@ -17,89 +17,65 @@ power::power(QWidget *parent)
 //    createRedButton(&DEVICE_CONNECT.IN_MAT[538], "IN_MAT_538");
 //    createRedButton(&DEVICE_CONNECT.IN_MAT[550], "IN_MAT_550");
     createSign("SIO");
-    createRedButton(&DEVICE_CONNECT.IN_MAT[556], "Переключатель ГЕН ВСУ (сеть 27)");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[556], "ГЕН ВСУ (сеть 27)");
     //s1_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[531], "Переключатель Г1 (сеть 27)");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[531], "Г1 (сеть 27)");
     //s4_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[535], "Переключатель Г2");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[535], "Г2");
     //s5_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[535], "Переключатель Г3");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[535], "Г3");
     //s8_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[547], "Переключатель Г4");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[547], "Г4");
     //s11_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[529], "Переключатель кнопочный включения РАП1");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[529], "РАП1");
     //s2_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[541], "Переключатель кнопочный включения РАП2");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[541], "РАП2");
     //s9_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[537], "Переключатель кнопочный"
-                                                 " включения аккумулятора №1 АКК1");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[537], "АКК1");
     //s14_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[561], "Переключатель кнопочный"
-                                                 " включения аккумулятора №2 АКК2");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[561], "АКК2");
     //s15_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[549], "Переключатель кнопочный"
-                                                 " СОЕД СЕТЕЙ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[549], "СОЕД СЕТЕЙ");
     //s7_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[523], "Переключатель ЗЕМЛЯ - ВОЗДУХ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[523], "ЗЕМЛЯ - ВОЗДУХ");
     //s13_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[546], "Переключатель кнопочный включения"
-                                                 " ЧАСТИЧНЫЙ РЕЖИМ (сеть 27В лев)");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[546], "ЧАСТИЧНЫЙ РЕЖИМ (сеть 27В лев)");
     //s10_2430
     createRedButton(&DEVICE_CONNECT.IN_MAT[577], "Переключатель вольтметра");
     //s16_2430
     createRedButton(&DEVICE_CONNECT.IN_MAT[525], "Переключатель амперметра");
     //s17_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[748], "Сигнал с пульта ПП-73"
-                                                 "(пуль запуска и управления ВСУ)");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[748], "Главынй выключатель ВСУ");
     //s5-pp73
-    createRedButton(&DEVICE_CONNECT.IN_MAT[196], "Выключатель ЭСУД СКУ1");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[196], "ЭСУД СКУ1");
     //s1_7710
-    createRedButton(&DEVICE_CONNECT.IN_MAT[197], "Выключатель ЭСУД СКУ2");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[197], "ЭСУД СКУ2");
     //s2_7710
-    createRedButton(&DEVICE_CONNECT.IN_MAT[198], "Выключатель ЭСУД СКУ3");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[198], "ЭСУД СКУ3");
     //s3_7710
-    createRedButton(&DEVICE_CONNECT.IN_MAT[199], "Выключатель ЭСУД СКУ4");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[199], "ЭСУД СКУ4");
     //s4_7710
-    createRedButton(&DEVICE_CONNECT.IN_MAT[520], "Переключатель включения"
-                                                 " генератора переменного тока"
-                                                 " ГЕН1");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[520], "ГЕН1");
     //s1_2420
-    createRedButton(&DEVICE_CONNECT.IN_MAT[565], "Переключатель включения"
-                                                 " генератора переменного тока"
-                                                 " ГЕН2");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[565], "ГЕН2");
     //s5_2420
-    createRedButton(&DEVICE_CONNECT.IN_MAT[568], "Переключатель включения"
-                                                 " генератора переменного тока"
-                                                 " ГЕН3");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[568], "ГЕН3");
     //s10_2420
-    createRedButton(&DEVICE_CONNECT.IN_MAT[575], "Переключатель включения"
-                                                 " генератора переменого тока"
-                                                 " ГЕН4");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[575], "ГЕН4");
     //s13_2420
-    createRedButton(&DEVICE_CONNECT.IN_MAT[522], "Переключатель включения"
-                                                 " частичного режима левой сети"
-                                                 " переменного тока"
-                                                 " ЧАСТИЧНЫЙ РЕЖИМ СЕТЬ ЛЕВАЯ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[522], "ЧАСТИЧНЫЙ РЕЖИМ СЕТЬ ЛЕВАЯ");
     //s4_2420
-    createRedButton(&DEVICE_CONNECT.IN_MAT[567], "Переключатель включения"
-                                                 " частичного режима правой"
-                                                 " сети переменного тока"
-                                                 " ЧАСТИЧНЫЙ РЕЖИМ СЕТЬ ПРАВАЯ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[567], "ЧАСТИЧНЫЙ РЕЖИМ СЕТЬ ПРАВАЯ");
     //s12_2420
-    createRedButton(&DEVICE_CONNECT.IN_MAT[549], "Кнопочный переключатель включения"
-                                                 " генератора переменного тока"
-                                                 " ВСУ ГЕН ВСУ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[549], "ВСУ ГЕН ВСУ");
     //s8_2420
-    createRedButton(&DEVICE_CONNECT.IN_MAT[557], "Переключатель СЕТЬ 115/200В"
-                                                 " СОЕДИН СЕТЕЙ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[557], "СЕТЬ 115/200В СОЕДИН СЕТЕЙ");
     //s2_2420
-    createRedButton(&DEVICE_CONNECT.IN_MAT[555], "Переключатель СЕТЬ 115/200В"
-                                                 " СОЕДИН СЕТЕЙ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[555], " СЕТЬ 115/200В РАП");
     //s9_2420
-    createRedButton(&DEVICE_CONNECT.IN_MAT[592], "Выключатель ПТС ПРЕОБР 1");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[592], "ПТС ПРЕОБР 1");
     //s15_2420
-    createRedButton(&DEVICE_CONNECT.IN_MAT[594], "Выключатель преобразователя №3"
-                                                 " (ПОС1000)");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[594], "ПОС1000");
     //s21_2420
     newColumn();
     createSign("RMI_PILOT");
@@ -108,10 +84,10 @@ power::power(QWidget *parent)
     createRedButton(&RMI_PILOT_CONNECT.Otkaz[21], "отказ генератора постоянного тока 2");
     createRedButton(&RMI_PILOT_CONNECT.Otkaz[22], "отказ генератора постоянного тока 3");
     createRedButton(&RMI_PILOT_CONNECT.Otkaz[23], "отказ генератора постоянного тока 4");
-    createRedButton(&RMI_PILOT_CONNECT.Otkaz[24], "Перегрев генератора 1 постоянного тока");
-    createRedButton(&RMI_PILOT_CONNECT.Otkaz[25], "Перегрев генератора 2 постоянного тока");
-    createRedButton(&RMI_PILOT_CONNECT.Otkaz[26], "Перегрев генератора 3 постоянного тока");
-    createRedButton(&RMI_PILOT_CONNECT.Otkaz[27], "Перегрев генератора 4 постоянного тока");
+    createRedButton(&RMI_PILOT_CONNECT.Otkaz[24], "Перегрузка генератора 1 постоянного тока");
+    createRedButton(&RMI_PILOT_CONNECT.Otkaz[25], "Перегрузка генератора 2 постоянного тока");
+    createRedButton(&RMI_PILOT_CONNECT.Otkaz[26], "Перегрузка генератора 3 постоянного тока");
+    createRedButton(&RMI_PILOT_CONNECT.Otkaz[27], "Перегрузка генератора 4 постоянного тока");
     createRedButton(&RMI_PILOT_CONNECT.Otkaz[10], "Падение давления масла ППО ген 1 переменного тока");
     createRedButton(&RMI_PILOT_CONNECT.Otkaz[11], "Падение давления масла ППО ген 2 переменного тока");
     createRedButton(&RMI_PILOT_CONNECT.Otkaz[12], "Падение давления масла ППО ген 3 переменного тока");
