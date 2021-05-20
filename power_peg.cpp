@@ -1,4 +1,4 @@
-#include "inmat_int.h"
+#include "power_peg.h"
 
 #include <QTextCodec>
 #include <unistd.h>
@@ -8,12 +8,12 @@
 // russian characters
 QString RUS_String(const char* t)
 {
- return QString::fromLocal8Bit(t);
+    return QString::fromLocal8Bit(t);
 }
-power::power(QWidget *parent)
+power_peg::power_peg(QWidget *parent)
     : interfacing(parent)
 {
-    power::setWindowTitle("Power");
+    power_peg::setWindowTitle("Power");
 //    createRedButton(&DEVICE_CONNECT.IN_MAT[538], "IN_MAT_538");
 //    createRedButton(&DEVICE_CONNECT.IN_MAT[550], "IN_MAT_550");
     createSign("ISU");
@@ -47,7 +47,7 @@ power::power(QWidget *parent)
     //s14_2430
     createRedButton(&DEVICE_CONNECT.IN_MAT[537], "АКК1");
     //s15_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[561], "АКК2");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[539], "АКК2");
     //s7_2430
     createRedButton(&DEVICE_CONNECT.IN_MAT[549], "СОЕД СЕТЕЙ");
     //s13_2430
@@ -109,7 +109,15 @@ power::power(QWidget *parent)
     //s15_2420
     createRedButton(&DEVICE_CONNECT.IN_MAT[592], "ПТС ПРЕОБР 1");
     //s21_2420
-    createRedButton(&DEVICE_CONNECT.IN_MAT[594], "ПОС1000");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[594], "ПОС1000 ПРЕОБР 3");
+    //s3_2420
+    createRedButton(&DEVICE_CONNECT.IN_MAT[561], "ППО1");
+    //s6_2420
+    createRedButton(&DEVICE_CONNECT.IN_MAT[563], "ППО2");
+    //s11_2420
+    createRedButton(&DEVICE_CONNECT.IN_MAT[571], "ППО3");
+    //s14_2420
+    createRedButton(&DEVICE_CONNECT.IN_MAT[573], "ППО4");
     newColumn();
 
     createSign("RMI_PILOT");
@@ -251,7 +259,7 @@ power::power(QWidget *parent)
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][7], "ПРЕОБР 1 (ШИНА 3 АПШ)");
 }
 
-void power::updateSmth()
+void power_peg::updateSmth()
 {
     interfacing::updMmrState();
 }

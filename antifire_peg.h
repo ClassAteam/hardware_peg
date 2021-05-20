@@ -1,12 +1,12 @@
 #pragma once
 #include "interfacing.h"
 
-class outD_int : public interfacing
+class antifire_peg : public interfacing
 {
     Q_OBJECT
 
 public:
 
-    outD_int(QWidget *parent = nullptr);
+    antifire_peg(QWidget *parent = nullptr);
     virtual void updateSmth();
 };

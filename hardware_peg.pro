@@ -9,10 +9,10 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    inmat_int.cpp \
+    antifire_peg.cpp \
     interfacing.cpp \
     main.cpp \
-    outd_int.cpp
+    power_peg.cpp
 
 HEADERS += \
     Struct_DeviceConnect.h \
@@ -20,9 +20,9 @@ HEADERS += \
     Struct_FromRmiPilot.h \
     Struct_ISU.h \
     Struct_ToRmiNavig.h \
-    inmat_int.h \
+    antifire_peg.h \
     interfacing.h \
-    outd_int.h
+    power_peg.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
