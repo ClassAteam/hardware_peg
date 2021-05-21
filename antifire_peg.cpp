@@ -4,23 +4,23 @@
 antifire_peg::antifire_peg(QWidget *parent)
     : interfacing(parent)
 {
-    antifire_peg::setWindowTitle("aircondition");
+    antifire_peg::setWindowTitle("antifire");
     createSign("ISU");
 
     //s3_2610
     createRedButton(&DEVICE_CONNECT.IN_MAT[289], "ДВ1");
     //s4_2610
     createRedButton(&DEVICE_CONNECT.IN_MAT[291], "ДВ2");
-    //s5_2610
-    createRedButton(&DEVICE_CONNECT.IN_MAT[377], "КРАН ВСУ");
-    //s6_2610
-    createRedButton(&DEVICE_CONNECT.IN_MAT[660], "КРАН ВСУ");
     //s7_2610
-    createRedButton(&DEVICE_CONNECT.IN_MAT[293], "КРАН ВСУ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[293], "ДВ3");
     //s8_2610
-    createRedButton(&DEVICE_CONNECT.IN_MAT[295], "КРАН ВСУ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[295], "ДВ4");
+    //s5_2610
+    createRedButton(&DEVICE_CONNECT.IN_MAT[377], "КРАН ВСУ(Л)");
+    //s6_2610
+    createRedButton(&DEVICE_CONNECT.IN_MAT[660], "КРАН ВСУ(ШО)");
     //s9_2610
-    createRedButton(&DEVICE_CONNECT.IN_MAT[383], "КРАН ВСУ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[383], "РАБОТА");
     //s1_2610
     createRedButton(&DEVICE_CONNECT.IN_MAT[864], "ВЫБОР ОТСЕКА: ОТКЛ");
     createRedButton(&DEVICE_CONNECT.IN_MAT[865], "ВЫБОР ОТСЕКА: МГ 1ДВ");
@@ -39,14 +39,24 @@ antifire_peg::antifire_peg(QWidget *parent)
     createRedButton(&DEVICE_CONNECT.IN_MAT[877], "ВЫБОР ДАТЧИКОВ: ПОЖАР");
     //s10_2610
     createRedButton(&DEVICE_CONNECT.IN_MAT[878], "ОГНЕТУШ");
-    //s11_2610
-    createRedButton(&DEVICE_CONNECT.IN_MAT[299], "ОЧ 2");
-    //s13_2610
-    createRedButton(&DEVICE_CONNECT.IN_MAT[297], "ОЧЕР 3Л");
-    //s14_2610
-    createRedButton(&DEVICE_CONNECT.IN_MAT[664], "ОЧ 3");
     //s15_2610
-    createRedButton(&DEVICE_CONNECT.IN_MAT[301], "ОЧЕР 1Л");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[301], "ОЧЕР 1(Л)");
+    //s11_2610
+    createRedButton(&DEVICE_CONNECT.IN_MAT[299], "ОЧЕР 2(Л)");
+    //s13_2610
+    createRedButton(&DEVICE_CONNECT.IN_MAT[297], "ОЧЕР 3(Л)");
+    //s12_2610
+    createRedButton(&DEVICE_CONNECT.IN_MAT[662], "ОЧ 2(ШО)");
+    //s14_2610
+    createRedButton(&DEVICE_CONNECT.IN_MAT[664], "ОЧ 3(ШО)");
+    //F135_2805
+    createRedButton(&DEVICE_CONNECT.IN_MAT[337], "СТОП КРАН ЗАКРЫТ 1");
+    //F145_2805
+    createRedButton(&DEVICE_CONNECT.IN_MAT[339], "СТОП КРАН ЗАКРЫТ 2");
+    //F155_2805
+    createRedButton(&DEVICE_CONNECT.IN_MAT[341], "СТОП КРАН ЗАКРЫТ 3");
+    //F165_2805
+    createRedButton(&DEVICE_CONNECT.IN_MAT[343], "СТОП КРАН ЗАКРЫТ 4");
 
     newColumn();
     createSign("RMI_PILOT");
@@ -68,6 +78,7 @@ antifire_peg::antifire_peg(QWidget *parent)
                                                   "сигнализации ПЕРЕГРЕВ 3ДВ");
     createRedButton(&RMI_PILOT_CONNECT.Otkaz[43], "Ложное срабатывание"
                                                   "сигнализации ПЕРЕГРЕВ 4ДВ");
+    createRedButton(&RMI_PILOT_CONNECT.balAntifireToFull, "Зарядить баллоны");
 
     newColumn();
     createSign("OUT_D");

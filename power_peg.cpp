@@ -147,6 +147,10 @@ power_peg::power_peg(QWidget *parent)
     createRedButton(&RMI_PILOT_CONNECT.Otkaz[19], "Перегрузка генератора 4 переменного тока");
     createRedButton(&RMI_PILOT_CONNECT.Otkaz[28], "Перегрев аккумулятора 1");
     createRedButton(&RMI_PILOT_CONNECT.Otkaz[29], "Перегрев аккумулятора 2");
+    createRedButton(&RMI_PILOT_CONNECT.accChargeToFull, "Аккумуляторы в исх. полож.");
+    createRedButton(&RMI_PILOT_CONNECT.rap1PlugIn, "Подключение РАП1 (27В)");
+    createRedButton(&RMI_PILOT_CONNECT.rap2PlugIn, "Подключение РАП2 (27В)");
+    createRedButton(&RMI_PILOT_CONNECT.rapPlugIn, "Подключение РАП (115.200В)");
     newColumn();
     createSign("OUT_D");
     //BSS837X2P
@@ -158,7 +162,7 @@ power_peg::power_peg(QWidget *parent)
     //BSS926X2g
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][11], "ВКЛ РАП1 сеть лев");
     //BSS926X2m
-    createLabelClue(&DEVICE_CONNECT.OUT_D[2][46], "ВКЛ РАП2 сеть лев");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[2][21], "ВКЛ РАП2 сеть лев");
     //BSS926X2h
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][14], "ВКЛ Частичный режим сеть лев");
     //BSS926X2n
@@ -205,6 +209,8 @@ power_peg::power_peg(QWidget *parent)
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][48], "ОТКЛЮЧИ ППО3");
     //BSS837X2i
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][50], "ОТКЛЮЧИ ППО4");
+    newColumn();
+    posOcupied();
     //BSS926X2q
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][54], "ВКЛ (РАП СЕТЬ 115/220В)");
     //BSS926X2r

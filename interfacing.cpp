@@ -346,10 +346,11 @@ void interfacing::updMmrState()
     //RMI_PILOT
     SHARE_RMI_PILOT.lock();
     pPlt = static_cast<SH_FROMRMI_PILOT*>(SHARE_RMI_PILOT.data());
-    for(int i = 0; i < NUM_PILOT_OTKAZ; ++i)
-        pPlt->Otkaz[i] = RMI_PILOT_CONNECT.Otkaz[i];
+//    for(int i = 0; i < NUM_PILOT_OTKAZ; ++i)
+//        pPlt->Otkaz[i] = RMI_PILOT_CONNECT.Otkaz[i];
 
-    pPlt->bRMI_ALL = RMI_PILOT_CONNECT.bRMI_ALL;
+//    pPlt->bRMI_ALL = RMI_PILOT_CONNECT.bRMI_ALL;
+    *pPlt = RMI_PILOT_CONNECT;
 
     SHARE_RMI_PILOT.unlock();
 
