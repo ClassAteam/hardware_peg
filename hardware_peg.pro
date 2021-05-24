@@ -12,6 +12,7 @@ SOURCES += \
     antifire_peg.cpp \
     hydro_peg.cpp \
     interfacing.cpp \
+    landinggear_peg.cpp \
     main.cpp \
     power_peg.cpp
 
@@ -24,6 +25,7 @@ HEADERS += \
     antifire_peg.h \
     hydro_peg.h \
     interfacing.h \
+    landinggear_peg.h \
     power_peg.h
 
 # Default rules for deployment.

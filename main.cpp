@@ -2,6 +2,7 @@
 #include "power_peg.h"
 #include "antifire_peg.h"
 #include "hydro_peg.h"
+#include "landinggear_peg.h"
 
 
 
@@ -14,5 +15,8 @@ int main(int argc, char *argv[])
     antifire.show();
     hydro_peg hydro;
     hydro.show();
+    landinggear_peg landinggear;
+    landinggear.show();
+
     return a.exec();
 }

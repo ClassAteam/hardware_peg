@@ -130,7 +130,7 @@ void interfacing::createLabelValue(double* value, QString name)
 {
     QLabel *label = new QLabel(name);
     layout_buttons->addWidget(label, row, column);
-    label->setFixedWidth(200);
+    label->setFixedWidth(300);
     posOcupied();
     lblValues.append(value);
     lblValueID++;
