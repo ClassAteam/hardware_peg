@@ -5,156 +5,163 @@ hydro_peg::hydro_peg(QWidget *parent)
 {
     hydro_peg::setWindowTitle("hydro");
     createSign("ISU");
+    //EZR1_34
+    createRedButton(&ISU_CONNECT.ezr1_34, "–ø—Ä–∏–∑–Ω–∞–∫ –∑–∞–ø—É—Å–∫–∞ 1–¥–≤");
+    //EZR2_34
+    createRedButton(&ISU_CONNECT.ezr2_34, "–ø—Ä–∏–∑–Ω–∞–∫ –∑–∞–ø—É—Å–∫–∞ 2–¥–≤");
+    //EZR3_34
+    createRedButton(&ISU_CONNECT.ezr3_34, "–ø—Ä–∏–∑–Ω–∞–∫ –∑–∞–ø—É—Å–∫–∞ 3–¥–≤");
+    //EZR4_34
+    createRedButton(&ISU_CONNECT.ezr4_34, "–ø—Ä–∏–∑–Ω–∞–∫ –∑–∞–ø—É—Å–∫–∞ 4–¥–≤");
 
+    //Pv_vsu
+    createLabelValue(&ISU_CONNECT.Pvvsu, "–¥–∞–≤–ª –≤–æ–∑–¥ –æ—Ç –≤—Å–ø–º–≥ —Å–∏–ª —É—Å—Ç");
+    createSlider(&ISU_CONNECT.Pvvsu, 0, 100);
+
+    //PRD1dv
+    createRedButton(&ISU_CONNECT.prd1dv, "–ø—Ä–∏–∑–Ω–∞–∫ —Ä–∞–± 1–¥–≤");
+    //PRD2dv
+    createRedButton(&ISU_CONNECT.prd2dv, "–ø—Ä–∏–∑–Ω–∞–∫ —Ä–∞–± 2–¥–≤");
+    //PRD3dv
+    createRedButton(&ISU_CONNECT.prd3dv, "–ø—Ä–∏–∑–Ω–∞–∫ —Ä–∞–± 3–¥–≤");
+    //PRD4dv
+    createRedButton(&ISU_CONNECT.prd4dv, "–ø—Ä–∏–∑–Ω–∞–∫ —Ä–∞–± 4–¥–≤");
+
+    newColumn();
+    createSign("SIO");
     //s1_2910
-    createRedButton(&DEVICE_CONNECT.IN_MAT[35], "œ–»Õ”ƒ œŒƒ À √/Õ¿—Œ—Œ¬");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[35], "–ü–†–ò–ù–£–î –ü–û–î–ö–õ –ì/–ù–ê–°–û–°–û–í");
     //s2_2910
-    createRedButton(&DEVICE_CONNECT.IN_MAT[756], " ŒÕ“–ŒÀ‹ –¿«√–”« »");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[756], "–ö–û–ù–¢–†–û–õ–¨ –†–ê–ó–ì–†–£–ó–ö–ò");
     //s3_2910
-    createRedButton(&DEVICE_CONNECT.IN_MAT[753], "¬€¡Œ– Õ¿—Œ—¿ √—1,2");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[753], "–í–´–ë–û–† –ù–ê–°–û–°–ê –ì–°1,2");
     //s4_2910
-    createRedButton(&DEVICE_CONNECT.IN_MAT[755], "¬€¡Œ– Õ¿—Œ—¿ √—3,4");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[755], "–í–´–ë–û–† –ù–ê–°–û–°–ê –ì–°3,4");
 
     //s5_2910
-    createRedButton(&DEVICE_CONNECT.IN_MAT[353], "› —“–≈ÕÕŒ≈ Œ“ À √/Õ¿—Œ—Œ¬ ƒ¬2 » 3");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[353], "–≠–ö–°–¢–†–ï–ù–ù–û–ï –û–¢–ö–õ –ì/–ù–ê–°–û–°–û–í –î–í2 –ò 3");
     //s6_2910
-    createRedButton(&DEVICE_CONNECT.IN_MAT[352], "› —“–≈ÕÕŒ≈ Œ“ À √/Õ¿—Œ—Œ¬ ƒ¬1 » 4");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[352], "–≠–ö–°–¢–†–ï–ù–ù–û–ï –û–¢–ö–õ –ì/–ù–ê–°–û–°–û–í –î–í1 –ò 4");
     //s7_2910
-    createRedButton(&DEVICE_CONNECT.IN_MAT[358], "Œ“ À √/Õ¿—Œ—Œ¬ ƒ¬2");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[358], "–û–¢–ö–õ –ì/–ù–ê–°–û–°–û–í –î–í2");
 
     //s1_2920
-    createRedButton(&DEVICE_CONNECT.IN_MAT[45], "√»ƒ–Œœ»“¿Õ»≈ —”– √—1");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[45], "–ì–ò–î–†–û–ü–ò–¢–ê–ù–ò–ï –°–£–† –ì–°1");
     //s2_2920
-    createRedButton(&DEVICE_CONNECT.IN_MAT[46], "√»ƒ–Œœ»“¿Õ»≈ —”– √—2");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[46], "–ì–ò–î–†–û–ü–ò–¢–ê–ù–ò–ï –°–£–† –ì–°2");
     //s3_2920
-    createRedButton(&DEVICE_CONNECT.IN_MAT[47], "√»ƒ–Œœ»“¿Õ»≈ —”– √—3");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[47], "–ì–ò–î–†–û–ü–ò–¢–ê–ù–ò–ï –°–£–† –ì–°3");
     //s4_2920
-    createRedButton(&DEVICE_CONNECT.IN_MAT[48], "√»ƒ–Œœ»“¿Õ»≈ —”– √—4");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[48], "–ì–ò–î–†–û–ü–ò–¢–ê–ù–ò–ï –°–£–† –ì–°4");
     //s5_2920
-    createRedButton(&DEVICE_CONNECT.IN_MAT[204], " –¿Õ€  ŒÀ‹÷≈¬¿Õ»ﬂ √—1");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[204], "–ö–†–ê–ù–´ –ö–û–õ–¨–¶–ï–í–ê–ù–ò–Ø –ì–°1");
     //s6_2920
-    createRedButton(&DEVICE_CONNECT.IN_MAT[205], " –¿Õ€  ŒÀ‹÷≈¬¿Õ»ﬂ √—2");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[205], "–ö–†–ê–ù–´ –ö–û–õ–¨–¶–ï–í–ê–ù–ò–Ø –ì–°2");
     //s7_2920
-    createRedButton(&DEVICE_CONNECT.IN_MAT[206], " –¿Õ€  ŒÀ‹÷≈¬¿Õ»ﬂ √—3");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[206], "–ö–†–ê–ù–´ –ö–û–õ–¨–¶–ï–í–ê–ù–ò–Ø –ì–°3");
     //s8_2920
-    createRedButton(&DEVICE_CONNECT.IN_MAT[207], " –¿Õ€  ŒÀ‹÷≈¬¿Õ»ﬂ √—4");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[207], "–ö–†–ê–ù–´ –ö–û–õ–¨–¶–ï–í–ê–ù–ò–Ø –ì–°4");
 
     //s9_2920
-    createRedButton(&DEVICE_CONNECT.IN_MAT[37], "“Õ” √—1 Œ“ À");
-    createRedButton(&DEVICE_CONNECT.IN_MAT[38], "“Õ” √—1 ¬ À");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[37], "–¢–ù–£ –ì–°1 –û–¢–ö–õ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[38], "–¢–ù–£ –ì–°1 –í–ö–õ");
 
     //s10_2920
-    createRedButton(&DEVICE_CONNECT.IN_MAT[39], "“Õ” √—2 Œ“ À");
-    createRedButton(&DEVICE_CONNECT.IN_MAT[40], "“Õ” √—2 ¬ À");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[39], "–¢–ù–£ –ì–°2 –û–¢–ö–õ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[40], "–¢–ù–£ –ì–°2 –í–ö–õ");
 
     //s11_2920
-    createRedButton(&DEVICE_CONNECT.IN_MAT[41], "“Õ” √—3 Œ“ À");
-    createRedButton(&DEVICE_CONNECT.IN_MAT[42], "“Õ” √—3 ¬ À");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[41], "–¢–ù–£ –ì–°3 –û–¢–ö–õ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[42], "–¢–ù–£ –ì–°3 –í–ö–õ");
 
     //s12_2920
-    createRedButton(&DEVICE_CONNECT.IN_MAT[43], "“Õ” √—4 Œ“ À");
-    createRedButton(&DEVICE_CONNECT.IN_MAT[44], "“Õ” √—4 ¬ À");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[43], "–¢–ù–£ –ì–°4 –û–¢–ö–õ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[44], "–¢–ù–£ –ì–°4 –í–ö–õ");
 
     //s13_2920
-    createRedButton(&DEVICE_CONNECT.IN_MAT[757], "“Õ” —»√Õ¿À");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[757], "–¢–ù–£ –°–ò–ì–ù–ê–õ");
     //s18_2930
-    createRedButton(&DEVICE_CONNECT.IN_MAT[761], "ÔÓ‚ÂÍ‡ Î‡ÏÔ");
-    //k24_3230
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "Ó·Ê‡ÚËÂ Ô‡‚ÓÈ ÓÔÓ˚");
-    //k26_3230
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "Ó·Ê‡ÚËÂ ÎÂ‚ÓÈ ÓÔÓ˚");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[761], "–ø—Ä–æ–≤–µ—Ä–∫–∞ –ª–∞–º–ø");
+//    //k24_3230
+//    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "–æ–±–∂–∞—Ç–∏–µ –ø—Ä–∞–≤–æ–π –æ–ø–æ—Ä—ã");
+//    //k26_3230
+//    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "–æ–±–∂–∞—Ç–∏–µ –ª–µ–≤–æ–π –æ–ø–æ—Ä—ã");
 
-    //EZR1_34
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "ÔËÁÌ‡Í Á‡ÔÛÒÍ‡ 1‰‚");
-    //EZR2_34
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "ÔËÁÌ‡Í Á‡ÔÛÒÍ‡ 2‰‚");
-    //EZR3_34
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "ÔËÁÌ‡Í Á‡ÔÛÒÍ‡ 3‰‚");
-    //EZR4_34
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "ÔËÁÌ‡Í Á‡ÔÛÒÍ‡ 4‰‚");
-    //Pv_vsu
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "‰‡‚Î ‚ÓÁ‰ ÓÚ ‚ÒÔÏ„ ÒËÎ ÛÒÚ");
-    //PRD1dv
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "ÔËÁÌ‡Í ‡· 1‰‚");
-    //PRD2dv
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "ÔËÁÌ‡Í ‡· 2‰‚");
-    //PRD3dv
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "ÔËÁÌ‡Í ‡· 3‰‚");
-    //PRD4dv
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "ÔËÁÌ‡Í ‡· 4‰‚");
 
     newColumn();
     createSign("RMI_PILOT");
     //p0gs1, p0gs2, p0gs3, p0gs4, p0gat
-    createRedButton(&RMI_PILOT_CONNECT.balHydroToFull, "Á‡ˇ‰ËÚ¸ „Ë‰Ó/‡ÍÍÛÏ");
+    createRedButton(&RMI_PILOT_CONNECT.balHydroToFull, "–∑–∞—Ä—è–¥–∏—Ç—å –≥–∏–¥—Ä–æ/–∞–∫–∫—É–º");
     //
-    createRedButton(&RMI_PILOT_CONNECT.balHydroToFull, "ÓÚÍ‡Á „Ò1");
+    createRedButton(&RMI_PILOT_CONNECT.Otkaz[1], "–æ—Ç–∫–∞–∑ –≥—Å1");
     //
-    createRedButton(&RMI_PILOT_CONNECT.balHydroToFull, "ÓÚÍ‡Á „Ò2");
+    createRedButton(&RMI_PILOT_CONNECT.Otkaz[2], "–æ—Ç–∫–∞–∑ –≥—Å2");
     //
-    createRedButton(&RMI_PILOT_CONNECT.balHydroToFull, "ÓÚÍ‡Á „Ò3");
+    createRedButton(&RMI_PILOT_CONNECT.Otkaz[3], "–æ—Ç–∫–∞–∑ –≥—Å3");
     //
-    createRedButton(&RMI_PILOT_CONNECT.balHydroToFull, "ÓÚÍ‡Á „Ò4");
+    createRedButton(&RMI_PILOT_CONNECT.Otkaz[4], "–æ—Ç–∫–∞–∑ –≥—Å4");
 
     newColumn();
     createSign("OUT_D");
     //H1_2910
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], "√»ƒ–ŒÕ¿—Œ—€ œŒƒ Àﬁ◊≈Õ€ √—2");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][101], "–ì–ò–î–†–û–ù–ê–°–û–°–´ –ü–û–î–ö–õ–Æ–ß–ï–ù–´ –ì–°2");
     //H2_2910
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], "√»ƒ–ŒÕ¿—Œ—€ œŒƒ Àﬁ◊≈Õ€ √—2");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][100], "–ì–ò–î–†–û–ù–ê–°–û–°–´ –ü–û–î–ö–õ–Æ–ß–ï–ù–´ –ì–°2");
     //H4_2910
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], "√»ƒ–ŒÕ¿—Œ—€ œŒƒ Àﬁ◊≈Õ€ √—3");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][102], "–ì–ò–î–†–û–ù–ê–°–û–°–´ –ü–û–î–ö–õ–Æ–ß–ï–ù–´ –ì–°3");
     //H5_2910
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], "√»ƒ–ŒÕ¿—Œ—€ œŒƒ ƒﬁ◊≈Õ€ √—4");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][103], "–ì–ò–î–†–û–ù–ê–°–û–°–´ –ü–û–î–ö–î–Æ–ß–ï–ù–´ –ì–°4");
     //H10_2930
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], "–≈«≈–¬Õ€… Õ¿ƒƒ”¬ √—1");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][96], "–†–ï–ó–ï–†–í–ù–´–ô –ù–ê–î–î–£–í –ì–°1");
     //H11_2930
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], "–≈«≈–¬Õ€… Õ¿ƒƒ”¬ √—2");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][97], "–†–ï–ó–ï–†–í–ù–´–ô –ù–ê–î–î–£–í –ì–°2");
     //H12_2930
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], "–≈«≈–¬Õ€… Õ¿ƒƒ”¬ √—3");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], "–†–ï–ó–ï–†–í–ù–´–ô –ù–ê–î–î–£–í –ì–°3");
     //H13_2930
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], "–≈«≈–¬Õ€… Õ¿ƒƒ”¬ √—4");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][99], "–†–ï–ó–ï–†–í–ù–´–ô –ù–ê–î–î–£–í –ì–°4");
     //H1_2935
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], "Õ¿—Œ— “∆“");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][104], "–ù–ê–°–û–° –¢–ñ–¢");
     //BSS811X2M
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], "√—1 – Ã¿ÀŒ");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][4], "–ì–°1 –† –ú–ê–õ–û");
     //BSS811X2N
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], "√—2 – Ã¿ÀŒ");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][5], "–ì–°2 –† –ú–ê–õ–û");
     //BSS811X2P
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], "√—3 – Ã¿ÀŒ");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][6], "–ì–°3 –† –ú–ê–õ–û");
     //BSS811X2R
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], "√—4 – Ã¿ÀŒ");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][7], "–ì–°4 –† –ú–ê–õ–û");
     //BSS811X2d
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], "—”– √—1 Œ“ À");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][79], "–°–£–† –ì–°1 –û–¢–ö–õ");
     //BSS811X2e
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], "—”– √—2 Œ“ À");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][80], "–°–£–† –ì–°2 –û–¢–ö–õ");
     //BSS811X2f
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], "—”– √—3 Œ“ À");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][81], "–°–£–† –ì–°3 –û–¢–ö–õ");
     //BSS811X2g
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], "—”– √—4 Œ“ À");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][82], "–°–£–† –ì–°4 –û–¢–ö–õ");
     //BSS812X6C
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], "“Õ” √—1 ¬ À");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][74], "–¢–ù–£ –ì–°1 –í–ö–õ");
     //BSS812X6D
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], "“Õ” √—2 ¬ À");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][75], "–¢–ù–£ –ì–°2 –í–ö–õ");
     //BSS812X6E
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], "“Õ” √—3 ¬ À");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][76], "–¢–ù–£ –ì–°3 –í–ö–õ");
     //BSS812X6F
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], "“Õ” √—4 ¬ À");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][77], "–¢–ù–£ –ì–°4 –í–ö–õ");
     //BSS812X6G
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], "œŒƒ À");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][73], "–ü–û–î–ö–õ");
     //BSS824X2e
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], " ŒÀ‹÷≈¬¿Õ»≈");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[1][52], "–ö–û–õ–¨–¶–ï–í–ê–ù–ò–ï");
     //BSS811X2G
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], " ŒÕ“” “∆“");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][22], "–ö–û–ù–¢–£ –¢–ñ–¢");
 
+    newColumn();
+    posOcupied();
     //pprgs1
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], "‰‡‚ÎÂÌËÂ √—1");
+    createLabelValue(&DEVICE_CONNECT.OUT_A[0][12], "–¥–∞–≤–ª–µ–Ω–∏–µ –ì–°1");
     //pprgs2
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], "‰‡‚ÎÂÌËÂ √—2");
+    createLabelValue(&DEVICE_CONNECT.OUT_A[0][13], "–¥–∞–≤–ª–µ–Ω–∏–µ –ì–°2");
     //pprgs3
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], "‰‡‚ÎÂÌËÂ √—3");
+    createLabelValue(&DEVICE_CONNECT.OUT_A[0][14], "–¥–∞–≤–ª–µ–Ω–∏–µ –ì–°3");
     //pprgs4
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][98], "‰‡‚ÎÂÌËÂ √—4");
+    createLabelValue(&DEVICE_CONNECT.OUT_A[0][15], "–¥–∞–≤–ª–µ–Ω–∏–µ –ì–°4");
 }
 
 void hydro_peg::updateSmth()

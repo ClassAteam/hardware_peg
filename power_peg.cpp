@@ -27,8 +27,8 @@ power_peg::power_peg(QWidget *parent)
     createSlider(&ISU_CONNECT.nvd4, 0, 100);
     createLabelValue(&ISU_CONNECT.nvdVsu, "ВСУ");
     createSlider(&ISU_CONNECT.nvdVsu, 0, 100);
-    newColumn();
 
+    newColumn();
     createSign("SIO");
     //s1_2430
     createRedButton(&DEVICE_CONNECT.IN_MAT[556], "ГЕН ВСУ (сеть 27)");
@@ -118,8 +118,8 @@ power_peg::power_peg(QWidget *parent)
     createRedButton(&DEVICE_CONNECT.IN_MAT[571], "ППО3");
     //s14_2420
     createRedButton(&DEVICE_CONNECT.IN_MAT[573], "ППО4");
-    newColumn();
 
+    newColumn();
     createSign("RMI_PILOT");
     createRedButton(&RMI_PILOT_CONNECT.bRMI_ALL, "Начальные условия");
     createRedButton(&RMI_PILOT_CONNECT.Otkaz[20], "отказ генератора постоянного тока 1");
@@ -151,6 +151,7 @@ power_peg::power_peg(QWidget *parent)
     createRedButton(&RMI_PILOT_CONNECT.rap1PlugIn, "Подключение РАП1 (27В)");
     createRedButton(&RMI_PILOT_CONNECT.rap2PlugIn, "Подключение РАП2 (27В)");
     createRedButton(&RMI_PILOT_CONNECT.rapPlugIn, "Подключение РАП (115.200В)");
+
     newColumn();
     createSign("OUT_D");
     //BSS837X2P
@@ -209,6 +210,7 @@ power_peg::power_peg(QWidget *parent)
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][48], "ОТКЛЮЧИ ППО3");
     //BSS837X2i
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][50], "ОТКЛЮЧИ ППО4");
+
     newColumn();
     posOcupied();
     //BSS926X2q

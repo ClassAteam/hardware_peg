@@ -346,10 +346,6 @@ void interfacing::updMmrState()
     //RMI_PILOT
     SHARE_RMI_PILOT.lock();
     pPlt = static_cast<SH_FROMRMI_PILOT*>(SHARE_RMI_PILOT.data());
-//    for(int i = 0; i < NUM_PILOT_OTKAZ; ++i)
-//        pPlt->Otkaz[i] = RMI_PILOT_CONNECT.Otkaz[i];
-
-//    pPlt->bRMI_ALL = RMI_PILOT_CONNECT.bRMI_ALL;
     *pPlt = RMI_PILOT_CONNECT;
 
     SHARE_RMI_PILOT.unlock();
@@ -357,10 +353,7 @@ void interfacing::updMmrState()
     //ISU
     SHARE_ISU.lock();
     pISU = static_cast<SH_ISU*>(SHARE_ISU.data());
-    pISU->nvd1 = ISU_CONNECT.nvd1;
-    pISU->nvd2 = ISU_CONNECT.nvd2;
-    pISU->nvd3 = ISU_CONNECT.nvd3;
-    pISU->nvd4 = ISU_CONNECT.nvd4;
+    *pISU = ISU_CONNECT;
     SHARE_ISU.unlock();
 }
 void interfacing::trigerButton()
