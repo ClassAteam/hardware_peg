@@ -51,7 +51,7 @@ power_peg::power_peg(QWidget *parent)
     //s7_2430
     createRedButton(&DEVICE_CONNECT.IN_MAT[549], "СОЕД СЕТЕЙ");
     //s13_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[523], "ЗЕМЛЯ - ВОЗДУХ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[524], "ЗЕМЛЯ - ВОЗДУХ");
     //s3_2430
     createRedButton(&DEVICE_CONNECT.IN_MAT[533], "ЧАСТИЧНЫЙ РЕЖИМ (сеть 27В лев)");
     //s10_2430
@@ -77,7 +77,10 @@ power_peg::power_peg(QWidget *parent)
     //s17_2430
     createRedButton(&DEVICE_CONNECT.IN_MAT[526], "Амперметр: АКК2 РАП2");
     //s17_2430
-    createRedButton(&DEVICE_CONNECT.IN_MAT[527], "Амперметр: ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[527], "Амперметр: ВСУ ");
+
+    newColumn();
+    posOcupied();
     //s5-pp73
     createRedButton(&DEVICE_CONNECT.IN_MAT[748], "Главынй выключатель ВСУ");
     //s1_7710
