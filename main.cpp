@@ -3,6 +3,7 @@
 #include "antifire_peg.h"
 #include "hydro_peg.h"
 #include "landinggear_peg.h"
+#include "wingsmech_peg.h"
 
 
 
@@ -17,6 +18,8 @@ int main(int argc, char *argv[])
     hydro.show();
     landinggear_peg landinggear;
     landinggear.show();
+    wingsmech_peg wing;
+    wing.show();
 
     return a.exec();
 }

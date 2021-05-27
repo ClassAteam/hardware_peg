@@ -14,7 +14,8 @@ SOURCES += \
     interfacing.cpp \
     landinggear_peg.cpp \
     main.cpp \
-    power_peg.cpp
+    power_peg.cpp \
+    wingsmech_peg.cpp
 
 HEADERS += \
     Struct_DeviceConnect.h \
@@ -26,7 +27,8 @@ HEADERS += \
     hydro_peg.h \
     interfacing.h \
     landinggear_peg.h \
-    power_peg.h
+    power_peg.h \
+    wingsmech_peg.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
