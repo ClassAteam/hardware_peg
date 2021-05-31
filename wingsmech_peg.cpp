@@ -4,14 +4,29 @@ wingsmech_peg::wingsmech_peg(QWidget *parent)
     : interfacing(parent)
 {
     wingsmech_peg::setWindowTitle("wingsmech");
+    createSlider(&DEVICE_CONNECT.IN_A[1][26], 0, 100);
 
+    createSlider(&DEVICE_CONNECT.IN_A[1][27], 0, 100);
+    //dela_ruz
+    createLabelValue(&DEVICE_CONNECT.IN_A[1][26],"Входное_положение_ручки"
+                                                  "_управления_закрылками");
+    //dela_ruk
+    createLabelValue(&DEVICE_CONNECT.IN_A[1][27],"Входное_положение_ручки"
+                                                  "_управления_стреловидностью"
+                                                  "_крыла");
+
+    newColumn();
     createSign("SIO");
     //s1_2750
     createRedButton(&DEVICE_CONNECT.IN_MAT[367], "колпачек "
                                                 "РЕЗЕРВНОЕ УПРАВЛЕНИЕ ЗАКРЫЛКИ");
     //s2_2750
     createRedButton(&DEVICE_CONNECT.IN_MAT[382], "выключатель РЕЗЕРВНОЕ "
-                                                "УПРАВЛЕНИЕ ЗАКРЫЛКАМИ");
+                                                "УПРАВЛЕНИЕ ЗАКРЫЛКАМИ "
+                                                 "ВЫПУСК");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[381], "выключатель РЕЗЕРВНОЕ "
+                                                "УПРАВЛЕНИЕ ЗАКРЫЛКАМИ "
+                                                 "УБОРКА");
     //s13_2750
     createRedButton(&DEVICE_CONNECT.IN_MAT[303], " ЗАКРЫЛКИ ПРЕДКРЫЛКИ "
                                                 "СЛЕДЯЩИЙ");
@@ -33,16 +48,6 @@ wingsmech_peg::wingsmech_peg(QWidget *parent)
                                                  "МЕНЬШЕ");
     createRedButton(&DEVICE_CONNECT.IN_MAT[376], "РЕЗЕРВН УПРАВЛ СТРЕЛОВ КРЫЛА "
                                                  "БОЛЬШЕ");
-    //dela_ruz
-    createLabelValue(&DEVICE_CONNECT.IN_A[1][26],"Входное_положение_ручки"
-                                                  "_управления_закрылками");
-    //dela_ruk
-    createLabelValue(&DEVICE_CONNECT.IN_A[1][27],"Входное_положение_ручки"
-                                                  "_управления_стреловидностью"
-                                                  "_крыла");
-    createSlider(&DEVICE_CONNECT.IN_A[1][26], 0, 100);
-
-    createSlider(&DEVICE_CONNECT.IN_A[1][27], 0, 100);
 
 
 
