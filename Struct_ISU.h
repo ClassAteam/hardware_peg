@@ -33,6 +33,7 @@ struct SH_ISU
     double ddelta_fl_l{};//skorost' peremesheniya flaperonov levih
     double ddelta_fl_p{};//skorost' peremesheniya flaperonov pravih
     double ddelta_fi_st{};//skorost' peremesheniya stabilizatora
+    bool PBI4M_1{};//priznak signala polnogo zakritiya stvorok gruzovih otsekov
 
 
 };

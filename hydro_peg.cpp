@@ -13,6 +13,8 @@ hydro_peg::hydro_peg(QWidget *parent)
     createRedButton(&ISU_CONNECT.ezr3_34, "признак запуска 3дв");
     //EZR4_34
     createRedButton(&ISU_CONNECT.ezr4_34, "признак запуска 4дв");
+    //PBI4M_1
+    createRedButton(&ISU_CONNECT.PBI4M_1, "сигнал полного закр створок гр. отс.");
 
     //Pv_vsu
     createLabelValue(&ISU_CONNECT.Pvvsu, "давл возд от вспмг сил уст");
@@ -106,7 +108,7 @@ hydro_peg::hydro_peg(QWidget *parent)
     //H1_2910
     createLabelClue(&DEVICE_CONNECT.OUT_D[0][101], "ГИДРОНАСОСЫ ПОДКЛЮЧЕНЫ ГС2");
     //H2_2910
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][100], "ГИДРОНАСОСЫ ПОДКЛЮЧЕНЫ ГС2");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][100], "ГИДРОНАСОСЫ ПОДКЛЮЧЕНЫ ГС1");
     //H4_2910
     createLabelClue(&DEVICE_CONNECT.OUT_D[0][102], "ГИДРОНАСОСЫ ПОДКЛЮЧЕНЫ ГС3");
     //H5_2910
@@ -162,6 +164,7 @@ hydro_peg::hydro_peg(QWidget *parent)
     createLabelValue(&DEVICE_CONNECT.OUT_A[0][14], "давление ГС3");
     //pprgs4
     createLabelValue(&DEVICE_CONNECT.OUT_A[0][15], "давление ГС4");
+
 }
 
 void hydro_peg::updateSmth()
