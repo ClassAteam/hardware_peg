@@ -4,6 +4,7 @@
 #include "hydro_peg.h"
 #include "landinggear_peg.h"
 #include "wingsmech_peg.h"
+#include "brakes_peg.h"
 
 
 
@@ -20,6 +21,8 @@ int main(int argc, char *argv[])
     landinggear.show();
     wingsmech_peg wing;
     wing.show();
+    brakes_peg brakes;
+    brakes.show();
 
     return a.exec();
 }

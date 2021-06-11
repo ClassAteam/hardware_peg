@@ -10,7 +10,7 @@ landinggear_peg::landinggear_peg(QWidget *parent)
     //wrapping
     createRedButton(&ISU_CONNECT.wrapsign, "Признак обжатия Л и П");
     //Xped
-    createLabelValue(&DEVICE_CONNECT.IN_A[0][12], "Положение_педалей");
+    createLabelValue(&DEVICE_CONNECT.IN_A[0][12], "Положение_педалей НК");
     createSlider(&DEVICE_CONNECT.IN_A[0][12], 0, 100);
 
     newColumn();
