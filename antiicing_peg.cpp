@@ -42,7 +42,7 @@ antiicing_peg::antiicing_peg(QWidget *parent)
     //s2_3080
     createRedButton(&DEVICE_CONNECT.IN_MAT[190], "СИГНАЛ ОБЛЕД ПРАВЫЙ");
     //s3_3080
-    createRedButton(&DEVICE_CONNECT.IN_MAT[191], "СО-121ВМ КОТР");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[191], "СО-121ВМ КОНТР");
     //s4_3080
     createRedButton(&DEVICE_CONNECT.IN_MAT[191], "ОБОГРЕВ ВНА1");
     //s5_3080
@@ -64,6 +64,7 @@ antiicing_peg::antiicing_peg(QWidget *parent)
     createRedButton(&RMI_PILOT_CONNECT.Otkaz[50], "Отказ правого канала СО-121");
     createRedButton(&RMI_PILOT_CONNECT.Otkaz[51], "Л сраб лев канала СО-121");
     createRedButton(&RMI_PILOT_CONNECT.Otkaz[52], " Л сраб прав канала СО-121");
+    createRedButton(&RMI_PILOT_CONNECT.icing, "Обледенение");
 
     newColumn();
     createSign("OUT_D");
