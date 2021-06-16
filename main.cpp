@@ -5,6 +5,7 @@
 #include "landinggear_peg.h"
 #include "wingsmech_peg.h"
 #include "brakes_peg.h"
+#include "antiicing_peg.h"
 
 
 
@@ -23,6 +24,8 @@ int main(int argc, char *argv[])
     wing.show();
     brakes_peg brakes;
     brakes.show();
+    antiicing_peg antiicing;
+    antiicing.show();
 
     return a.exec();
 }

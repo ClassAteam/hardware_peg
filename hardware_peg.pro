@@ -10,6 +10,7 @@ CONFIG += c++11
 
 SOURCES += \
     antifire_peg.cpp \
+    antiicing_peg.cpp \
     brakes_peg.cpp \
     hydro_peg.cpp \
     interfacing.cpp \
@@ -25,6 +26,7 @@ HEADERS += \
     Struct_ISU.h \
     Struct_ToRmiNavig.h \
     antifire_peg.h \
+    antiicing_peg.h \
     brakes_peg.h \
     hydro_peg.h \
     interfacing.h \

@@ -1,6 +1,5 @@
 #include "antifire_peg.h"
 
-
 antifire_peg::antifire_peg(QWidget *parent)
     : interfacing(parent)
 {
