@@ -16,6 +16,7 @@ SOURCES += \
     interfacing.cpp \
     landinggear_peg.cpp \
     main.cpp \
+    pneumo_peg.cpp \
     power_peg.cpp \
     wingsmech_peg.cpp
 
@@ -31,6 +32,7 @@ HEADERS += \
     hydro_peg.h \
     interfacing.h \
     landinggear_peg.h \
+    pneumo_peg.h \
     power_peg.h \
     wingsmech_peg.h
 

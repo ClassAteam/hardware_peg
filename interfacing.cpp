@@ -25,11 +25,21 @@ interfacing::interfacing(QWidget *parent)
 {
     layout_buttons = new QGridLayout(this);
     this->setLayout(layout_buttons);
-    QScreen *screen = QGuiApplication::primaryScreen();
-    QRect screenGeometry = screen->geometry();
-    this->setFixedHeight(screenGeometry.height());
-    this->setFixedWidth(screenGeometry.width());
-    this->setWindowState(Qt::WindowFullScreen);
+    //screen appearance
+
+
+
+    //second ver
+    int screenCount = QApplication::desktop()->screenCount();
+    QRect screenRect = QApplication::desktop()->screenGeometry(1);
+    this->move(QPoint(screenRect.x(), screenRect.y()));
+
+    //old ver
+//    QScreen *screen = QGuiApplication::primaryScreen();
+//    QRect screenGeometry = screen->geometry();
+//    this->setFixedHeight(screenGeometry.height());
+//    this->setFixedWidth(screenGeometry.width());
+//    this->setWindowState(Qt::WindowFullScreen);
     //fonts
     btnFont = new QFont("Courier", 12, QFont::Bold);
     lblClueFontAct = new QFont("Time", 8, QFont::Bold);
