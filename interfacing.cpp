@@ -154,7 +154,8 @@ void interfacing::createSlider(double* variable, int low_val, int high_val)
     slider->setRange(low_val, high_val);
     slider->setPageStep(1);
     slider->setValue(0);
-    slider->setStyleSheet("max-width: 10em;");
+//    slider->setStyleSheet("max-width: 10em;");
+    slider->setFixedWidth(40);
     layout_buttons->addWidget(slider, row, column);
     posOcupied();
     signalMapperSldrs->setMapping(slider, slID);
