@@ -7,6 +7,7 @@
 #include "brakes_peg.h"
 #include "antiicing_peg.h"
 #include "pneumo_peg.h"
+#include "presure_peg.h"
 
 
 
@@ -35,6 +36,8 @@ int main(int argc, char *argv[])
     antiicing.showMinimized();
     pneumo_peg pneumo;
     pneumo.showMinimized();
+    presure_peg presure;
+    presure.showMinimized();
 
     return a.exec();
 }
