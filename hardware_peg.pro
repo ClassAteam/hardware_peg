@@ -12,6 +12,7 @@ SOURCES += \
     antifire_peg.cpp \
     antiicing_peg.cpp \
     brakes_peg.cpp \
+    cabinlighting_peg.cpp \
     hydro_peg.cpp \
     interfacing.cpp \
     landinggear_peg.cpp \
@@ -30,6 +31,7 @@ HEADERS += \
     antifire_peg.h \
     antiicing_peg.h \
     brakes_peg.h \
+    cabinlighting_peg.h \
     hydro_peg.h \
     interfacing.h \
     landinggear_peg.h \
