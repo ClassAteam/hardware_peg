@@ -16,41 +16,40 @@ cabinlighting_peg::cabinlighting_peg(QWidget *parent)
     createRadioButton(&s1_3341, "АНО 100%", false);
     createRadioButton(&s1_3341, "МИГАНИЕ", true);
     //s2_3340
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "СВЕТ ЛЕВ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[137], "СВЕТ ЛЕВ");
     //s3_3340
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "ВЫПУСК-УБОРКА ЛЕВ");
-    //s4_3340
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "ВЫПУСК-УБОРКА ПРАВ");
+    createRadioButton(&s3_3340, "ВЫПУСК ЛЕВ", false);
+    createRadioButton(&s3_3340, "УБОРКА ЛЕВ", true);
     //s5_3340
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "СВЕТ ПРАВ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[142], "СВЕТ ПРАВ");
     //s1_11710
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "МФИ1 ЛЛ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[0], "МФИ1 ЛЛ");
     //s2_11710
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "МФИ2 ЛЛ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[1], "МФИ2 ЛЛ");
     //s3_11710
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "МФИ4 ПЛ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[212], "МФИ4 ПЛ");
     //s4_11710
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "МФИ5 ПЛ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[215], "МФИ5 ПЛ");
     //s5_11710
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "МФИ3 ЛЛ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[2], "МФИ3 ЛЛ");
     //s6_11710
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "МФИ3 ПЛ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[211], "МФИ3 ПЛ");
     //s7_11710
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "СОИ 1Л ШО");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[595], "СОИ 1Л ШО");
     //s8_11710
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "СОИ 1Л ШН");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[774], "СОИ 1Л ШН");
     //s11_11710
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "ЦВС 1Л");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[768], "ЦВС 1Л");
     //s12_11710
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "ЦВС 2Л");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[769], "ЦВС 2Л");
     //s13_11710
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "ЦВС 1Пр");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[770], "ЦВС 1Пр");
     //s14_11710
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "ЦВС 2Пр");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[771], "ЦВС 2Пр");
     //bgs1
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "БГС1");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[772], "БГС1");
     //bgs2
-    createRedButton(&DEVICE_CONNECT.IN_MAT[-1], "БГС2");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[773], "БГС2");
     //s2_3341
     createRadioButton(&s2_3341, "МАЯК100%", false);
     createRadioButton(&s2_3341, "ПОНИЖ", true);
@@ -76,54 +75,159 @@ cabinlighting_peg::cabinlighting_peg(QWidget *parent)
 
     newColumn();
     createSign("OUT_D");
-    //pk1pbllzo
-    createLabelClue(&DEVICE_CONNECT.OUT_D[5][96], "ПОЖАР ДВ1");
-    //BSS811X2W
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][99], "ПОЖАР ДВ2");
-    //BSS812X6S
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][100], "ПОЖАР ДВ3");
-    //BSS812X6U
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][101], "ПОЖАР ДВ4");
-    //BSS811X2Z
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][106], "ДВ1");
-    //BSS811X2a
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][107], "ДВ2");
-    //BSS913X2j
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][108], "ДВ3");
-    //BSS913X2k
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][109], "ДВ4");
-    //BSS913X2m
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][112], "ОЧЕР1");
-    //BSS913X2n
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][111], "ОЧЕР2");
-    //BSS913X2p
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][110], "ОЧЕР3");
-    //BSS811X2Y
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][97], "ВКЛЮЧИ");
-    //BSS811X2V
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][102], "ПЕРЕГРЕВ ДВ1");
-    //BSS811X2X
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][103], "ПЕРЕГРЕВ ДВ2");
-    //BSS812X6T
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][104], "ПЕРЕГРЕВ ДВ3");
-    //BSS812X6V
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][105], "ПЕРЕГРЕВ ДВ4");
-    //BSS811X2b
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][96], "КРАН ВСУ ЛЕТЧ");
-    //BSS811X2D
-    createLabelClue(&DEVICE_CONNECT.OUT_D[0][19], "ВСУ ПОЖАР ЛЕТЧ");
-    //BSS838X6p
-    createLabelClue(&DEVICE_CONNECT.OUT_D[2][69], "ВСУ ПОЖАР ОПЕР");
-    //BSS838X6i
-    createLabelClue(&DEVICE_CONNECT.OUT_D[2][79], "КРАН ВСУ ОПЕР");
-    //BSS926X2R
-    createLabelClue(&DEVICE_CONNECT.OUT_D[2][80], "ОЧ1");
-    //BSS926X2S
-    createLabelClue(&DEVICE_CONNECT.OUT_D[2][81], "ОЧ2");
-    //BSS926X2T
-    createLabelClue(&DEVICE_CONNECT.OUT_D[2][82], "ОЧ3");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[5][92], "ПК1ПБЛЛЗО");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[5][93], "ПК2ПБЛЛЗО");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[5][94], "ПК1ПБПЛЗО");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[5][95], "ПК2ПБПЛЗО");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[5][96], "ПК1ЛСПДЗО");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[5][97], "ПК2ЛСПДЗО");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[5][98], "ПК1ППДЗО");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[5][99], "ПК2ППДЗО");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[5][100], "ПК1СПЛЗО");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[5][101], "ПК2СПЛЗО");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[5][102], "ПК1ПДШОЗО");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[5][103], "ПК2ПДШОЗО");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[5][104], "ПК1ЛБШОЗО");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[5][105], "ПК2ЛБШОЗО");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[5][106], "ПК1ПДШНЗО");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[5][107], "ПК2ПДШНЗО");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[5][108], "ПК1ПБШНЗО");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[5][109], "ПК2ПБШНЗО");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[5][90], "ПССД37РКЛ");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[5][91], "ПССД37РКШ");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[5][110], "ПССД42Л");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[5][111], "ПССД42П");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВФЛ");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВФП");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПФПРЛР");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПФПРПР");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПФПРЛП");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПФПРПП");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПФСВ");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПФСВ");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПФСВ");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПФСВ");
+//    createLabelValue(&DEVICE_CONNECT.OUT_D[5][-1], "αФСВ");
+//    createLabelValue(&DEVICE_CONNECT.OUT_D[5][-1], "αФСВ");
+//    createLabelValue(&DEVICE_CONNECT.OUT_D[5][-1], "αФАЗЛ");
+//    createLabelValue(&DEVICE_CONNECT.OUT_D[5][-1], "αФАЗП");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПФСВ");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПФСВ");
+//    //BSS825X5V
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[1][36], "фары заправки выпущены");
+//    //BSS824X1E
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[1][34], "фары выпущ");
+//    //BSS824X1A
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[1][35], "свет посадоч");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВ_ОСН_ХВ_10");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВ_ОСН_ХВ_30");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВ_ОСН_ХВ_100");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВ_ОСН_ХВ_МИГ");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВ_ДОП");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВМВ10");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВМН10");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВМВ100");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВМН100");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПОВШ_Л");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПОВШ_П");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПОВШ_ПЕР");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВВОЛСПД");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВВОППД");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВВОСП");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВВОЛБЛ");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВВОПБЛ");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВВОЛСПДАВ");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВВОППДАВ");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВВОСПАВ");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВВОЛБЛАВ");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВВОПБЛАВ");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВВОПДШО");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВВОЛБШ");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВВОПДШН");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВВОПБШ");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВВОПДШОАВ");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВВОЛБШАВ");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВВОПДШНАВ");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВВОПБШАВ");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[4][34], "ПВПМФИ1");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[4][35], "ПВПМФИ2");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[4][41], "ПВПМФИ3");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[4][37], "ПВПМФИ4");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[4][38], "ПВПМФИ5");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[4][54], "ПВПМФИ6");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[4][56], "ПВПМФИ7");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[4][55], "ПВПМФИ8");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[4][46], "ПВПМФИ9");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[4][48], "ПВПМФИ10");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[4][47], "ПВПМФИ11");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[4][42], "ПВПМФПУ1");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[4][57], "ПВПМФПУ2");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[4][45], "ПВПМФПУ3");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВППУИ1");
+//    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВППУИ2");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][118], "ПВВОМФИ1");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][119], "ПВВОМФИ2");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][92], "ПВВОМФИ3");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][120], "ПВВОМФИ4");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][121], "ПВВОМФИ5");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][122], "ПВВОМФИ6");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][123], "ПВВОМФИ7");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][124], "ПВВОМФИ8");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][125], "ПВВОМФИ9");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][126], "ПВВОМФИ10");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][127], "ПВВОМФИ11");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][63], "ПВВОПУИ1");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[3][39], "ПВВОПУИ2");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][93], "ПВВОМФПУ1");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][94], "ПВВОМФПУ2");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][95], "ПВВОМФПУ3");
 }
 
 void cabinlighting_peg::updateSmth()
 {
+    DEVICE_CONNECT.IN_MAT[133] = false;
+    DEVICE_CONNECT.IN_MAT[134] = false;
+    DEVICE_CONNECT.IN_MAT[135] = false;
+    DEVICE_CONNECT.IN_MAT[136] = false;
+    switch(s1_3341)
+    {
+    case static_cast<int>(s1_3341::ANO10): DEVICE_CONNECT.IN_MAT[133] = true;
+        break;
+    case static_cast<int>(s1_3341::ANO30): DEVICE_CONNECT.IN_MAT[134] = true;
+        break;
+    case static_cast<int>(s1_3341::ANO100): DEVICE_CONNECT.IN_MAT[135] = true;
+        break;
+    case static_cast<int>(s1_3341::MIGANIE): DEVICE_CONNECT.IN_MAT[136] = true;
+        break;
+    }
+
+    DEVICE_CONNECT.IN_MAT[138] = false;
+    DEVICE_CONNECT.IN_MAT[139] = false;
+    switch(s3_3340)
+    {
+    case static_cast<int>(s3_3340::vipusk): DEVICE_CONNECT.IN_MAT[138] = true;
+        break;
+    case static_cast<int>(s3_3340::uborka): DEVICE_CONNECT.IN_MAT[139] = true;
+        break;
+
+    DEVICE_CONNECT.IN_MAT[140] = false;
+    DEVICE_CONNECT.IN_MAT[141] = false;
+    }
+    switch(s4_3340)
+    {
+    case static_cast<int>(s4_3340::vipusk): DEVICE_CONNECT.IN_MAT[140] = true;
+        break;
+    case static_cast<int>(s4_3340::uborka): DEVICE_CONNECT.IN_MAT[141] = true;
+        break;
+    }
+
+    DEVICE_CONNECT.IN_MAT[131] = false;
+    DEVICE_CONNECT.IN_MAT[132] = false;
+    switch(s2_3341)
+    {
+    case static_cast<int>(s2_3341::mayak100): DEVICE_CONNECT.IN_MAT[131] = true;
+        break;
+    case static_cast<int>(s2_3341::ponizh): DEVICE_CONNECT.IN_MAT[132] = true;
+        break;
+    }
 }

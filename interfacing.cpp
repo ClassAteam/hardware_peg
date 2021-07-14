@@ -290,7 +290,7 @@ void interfacing::setRB(const QString str)
 
 void interfacing::posOcupied()
 {
-    if(row < 80)
+    if(row < 40)
         row++;
     else
     {
