@@ -97,6 +97,11 @@ cabinlighting_peg::cabinlighting_peg(QWidget *parent)
     createLabelClue(&DEVICE_CONNECT.OUT_D[5][91], "ПССД37РКШ");
     createLabelClue(&DEVICE_CONNECT.OUT_D[5][110], "ПССД42Л");
     createLabelClue(&DEVICE_CONNECT.OUT_D[5][111], "ПССД42П");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[1][61], "ПК31ПДШОВО");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[1][62], "ПК31ПДШОВО");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[1][63], "ПК31ПДШОВО");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[1][94], "ПК31ПДШНВО");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[1][95], "ПК31ПДШНВО");
 //    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВФЛ");
 //    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВФП");
 //    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПФПРЛР");
