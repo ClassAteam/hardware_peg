@@ -9,19 +9,28 @@ cabinlighting_peg::cabinlighting_peg(QWidget *parent)
     //s1_3340
     createRedButton(&DEVICE_CONNECT.IN_MAT[289], "УБОРКА - ВЫПУСК");
     //s6_3340
-    createRedButton(&DEVICE_CONNECT.IN_MAT[129], "ВЗЛЕТ - ПОСАДКА");
+    createRadioButton(&s6_3340, "взлет-посадка", false);
+    createRadioButton(&s6_3340, "руление", false);
+    createRadioButton(&s6_3340, "откл", true);
     //s1_3341
     createRadioButton(&s1_3341, "АНО 10%", false);
     createRadioButton(&s1_3341, "АНО 30%", false);
     createRadioButton(&s1_3341, "АНО 100%", false);
     createRadioButton(&s1_3341, "МИГАНИЕ", true);
+    //s1_2860
+    createRedButton(&DEVICE_CONNECT.IN_MAT[144], "Питание штанги заправки");
     //s2_3340
     createRedButton(&DEVICE_CONNECT.IN_MAT[137], "СВЕТ ЛЕВ");
     //s3_3340
     createRadioButton(&s3_3340, "ВЫПУСК ЛЕВ", false);
-    createRadioButton(&s3_3340, "УБОРКА ЛЕВ", true);
+    createRadioButton(&s3_3340, "УБОРКА ЛЕВ", false);
+    createRadioButton(&s3_3340, "ОТКЛ", true);
     //s5_3340
     createRedButton(&DEVICE_CONNECT.IN_MAT[142], "СВЕТ ПРАВ");
+    //s4_3340
+    createRadioButton(&s4_3340, "ВЫПУСК ПРАВ", false);
+    createRadioButton(&s4_3340, "УБОРКА ПРАВ", false);
+    createRadioButton(&s4_3340, "ОТКЛ", true);
     //s1_11710
     createRedButton(&DEVICE_CONNECT.IN_MAT[0], "МФИ1 ЛЛ");
     //s2_11710
@@ -53,6 +62,8 @@ cabinlighting_peg::cabinlighting_peg(QWidget *parent)
     //s2_3341
     createRadioButton(&s2_3341, "МАЯК100%", false);
     createRadioButton(&s2_3341, "ПОНИЖ", true);
+    createSlider(&ISU_CONNECT.Vpr, 0, 150);
+    createLabelValue(&ISU_CONNECT.Vpr, "Скорость_приборная");
 
     newColumn();
     createSign("RMI_PILOT");
@@ -215,9 +226,10 @@ void cabinlighting_peg::updateSmth()
     case static_cast<int>(s3_3340::uborka): DEVICE_CONNECT.IN_MAT[139] = true;
         break;
 
+    }
+
     DEVICE_CONNECT.IN_MAT[140] = false;
     DEVICE_CONNECT.IN_MAT[141] = false;
-    }
     switch(s4_3340)
     {
     case static_cast<int>(s4_3340::vipusk): DEVICE_CONNECT.IN_MAT[140] = true;
@@ -233,6 +245,16 @@ void cabinlighting_peg::updateSmth()
     case static_cast<int>(s2_3341::mayak100): DEVICE_CONNECT.IN_MAT[131] = true;
         break;
     case static_cast<int>(s2_3341::ponizh): DEVICE_CONNECT.IN_MAT[132] = true;
+        break;
+    }
+
+    DEVICE_CONNECT.IN_MAT[129] = false;
+    DEVICE_CONNECT.IN_MAT[130] = false;
+    switch(s6_3340)
+    {
+    case static_cast<int>(s6_3340::vzlpos): DEVICE_CONNECT.IN_MAT[129] = true;
+        break;
+    case static_cast<int>(s6_3340::otkl): DEVICE_CONNECT.IN_MAT[130] = true;
         break;
     }
 }
