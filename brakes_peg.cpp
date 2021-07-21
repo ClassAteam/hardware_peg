@@ -5,17 +5,17 @@ brakes_peg::brakes_peg(QWidget *parent)
 {
     brakes_peg::setWindowTitle("brakes");
     createSign("ISU");
-    //X1_45_7620
-    createRedButton(&ISU_CONNECT.X1_45_7620, "пр. сиг. стоп-кран открыт 1дв.");
-    //X2_45_7620
-    createRedButton(&ISU_CONNECT.X2_45_7620, "пр. сиг. стоп-кран открыт 2дв.");
-    //X3_45_7620
-    createRedButton(&ISU_CONNECT.X3_45_7620, "пр. сиг. стоп-кран открыт 3дв.");
-    //X4_45_7620
-    createRedButton(&ISU_CONNECT.X4_45_7620, "пр. сиг. стоп-кран открыт 4дв.");
 
     newColumn();
     createSign("SIO");
+    //s1_7620
+    createRedButton(&DEVICE_CONNECT.IN_MAT[336], "стоп-кран открыт 1дв.");
+    //s2_7620
+    createRedButton(&DEVICE_CONNECT.IN_MAT[338], "стоп-кран открыт 2дв.");
+    //s3_7620
+    createRedButton(&DEVICE_CONNECT.IN_MAT[340], "стоп-кран открыт 3дв.");
+    //s4_7620
+    createRedButton(&DEVICE_CONNECT.IN_MAT[342], "стоп-кран открыт 4дв.");
     //s1_3240
     createRedButton(&DEVICE_CONNECT.IN_MAT[12], "ТОРМОЗА - СЛАБО");
     //s1_3240

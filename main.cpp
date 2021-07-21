@@ -9,6 +9,7 @@
 #include "pneumo_peg.h"
 #include "presure_peg.h"
 #include "cabinlighting_peg.h"
+#include "aircondition_peg.h"
 
 
 
@@ -41,6 +42,8 @@ int main(int argc, char *argv[])
     presure.showMinimized();
     cabinlighting_peg cabinlighting;
     cabinlighting.showMinimized();
+    aircondition_peg aircondition;
+    aircondition.showMinimized();
 
     return a.exec();
 }
