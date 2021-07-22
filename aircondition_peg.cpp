@@ -31,7 +31,7 @@ aircondition_peg::aircondition_peg(QWidget *parent)
     //s3_2120
     createRedButton(&DEVICE_CONNECT.IN_MAT[635], "ОТКАЗ МАГИСТРАЛЬ1");
     //s6_2120
-    createRedButton(&DEVICE_CONNECT.IN_MAT[610], "КОЛЬЦЕВАНИЕ МАГИСТРАЛИ");
+    createRedButton(&DEVICE_CONNECT.IN_MAT[631], "КОЛЬЦЕВАНИЕ МАГИСТРАЛИ");
     //s2_2120
     createRedButton(&DEVICE_CONNECT.IN_MAT[614], "МАГИСТРАЛЬ2");
     //s4_2120
@@ -133,9 +133,9 @@ aircondition_peg::aircondition_peg(QWidget *parent)
     //BSS838X6L
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][92], "ВКЛ (МПУ№1 ручной)");
     //BSS838X6M
-    createLabelClue(&DEVICE_CONNECT.OUT_D[5][92], "ВКЛЮЧИ (МПУ№2 ручной)");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[2][95], "ВКЛЮЧИ (МПУ№2 ручной)");
     //BSS838X6N
-    createLabelClue(&DEVICE_CONNECT.OUT_D[2][95], "ВКЛ (МПУ№2 ручной)");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[2][96], "ВКЛ (МПУ№2 ручной)");
     //BSS838X6W
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][97], "ОТКЛ(СКВ изделий)");
     //BSS825X6q
