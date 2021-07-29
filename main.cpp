@@ -10,6 +10,7 @@
 #include "presure_peg.h"
 #include "cabinlighting_peg.h"
 #include "aircondition_peg.h"
+#include "sas_peg.h"
 
 
 
@@ -44,6 +45,8 @@ int main(int argc, char *argv[])
     cabinlighting.showMinimized();
     aircondition_peg aircondition;
     aircondition.showMinimized();
+    sas_peg sas;
+    sas.showMinimized();
 
     return a.exec();
 }

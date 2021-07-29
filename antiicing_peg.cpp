@@ -74,7 +74,7 @@ antiicing_peg::antiicing_peg(QWidget *parent)
     createLabelClue(&DEVICE_CONNECT.OUT_D[1][46], "В/ЗАБ2 НЕИСПР");
     //BSS824X2C
     createLabelClue(&DEVICE_CONNECT.OUT_D[1][47], "В/ЗАБ3 НЕИСПР");
-    //BSS824X2D
+    //BSS824X2d
     createLabelClue(&DEVICE_CONNECT.OUT_D[1][48], "В/ЗАБ4 НЕИСПР");
     //BSS825_PROG
     createLabelClue(&DEVICE_CONNECT.OUT_D[1][44], "ПРОГРАММА");

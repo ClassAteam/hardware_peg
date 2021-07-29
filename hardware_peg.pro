@@ -21,6 +21,7 @@ SOURCES += \
     pneumo_peg.cpp \
     power_peg.cpp \
     presure_peg.cpp \
+    sas_peg.cpp \
     wingsmech_peg.cpp
 
 HEADERS += \
@@ -40,6 +41,7 @@ HEADERS += \
     pneumo_peg.h \
     power_peg.h \
     presure_peg.h \
+    sas_peg.h \
     wingsmech_peg.h
 
 # Default rules for deployment.
