@@ -18,7 +18,8 @@ landinggear_peg::landinggear_peg(QWidget *parent)
     //s1_3230
     createRedButton(&DEVICE_CONNECT.IN_MAT[157], "ОТКЛЮЧЕНИЕ ОСНОВН УПРАВЛ ШАССИ");
     //s2_3230
-    createRedButton(&DEVICE_CONNECT.IN_MAT[156], "ШАССИ ВЫПУСК");
+    createRadioButton(&s2_3230, "ШАССИ ВЫПУСК", false);
+    createRadioButton(&s2_3230, "ШАССИ УБОРКА", true);
     //s3_3230
     createRedButton(&DEVICE_CONNECT.IN_MAT[762], "ОСНОВН УПРАВЛ СИГНАЛ ДАВЛ");
     //s30_3230
@@ -68,15 +69,23 @@ landinggear_peg::landinggear_peg(QWidget *parent)
     //BSS824X2Y
     createLabelClue(&DEVICE_CONNECT.OUT_D[1][26], "ШАССИ ВЫПУСТИ");
     //BSS824X2U
-    createLabelClue(&DEVICE_CONNECT.OUT_D[1][29], "Левая опора - шасси убраны");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[1][29], "Левая опора - не убрана");
     //BSS824X2W
-    createLabelClue(&DEVICE_CONNECT.OUT_D[1][33], "Правая опора - шасси убраны");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[1][33], "Правая опора - не убрана");
     //BSS824X2V
-    createLabelClue(&DEVICE_CONNECT.OUT_D[1][31], "Передняя опора - шасси убраны");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[1][31], "Передняя опора - не убрана");
     //BSS812X6Y
     createLabelClue(&DEVICE_CONNECT.OUT_D[1][64], "Руление");
 }
 
 void landinggear_peg::updateSmth()
 {
+    DEVICE_CONNECT.IN_MAT[156] = false;
+    switch(s2_3230)
+    {
+    case static_cast<int>(s2_3230::vipusk):DEVICE_CONNECT.IN_MAT[156] = false;
+        break;
+    case static_cast<int>(s2_3230::uborka):DEVICE_CONNECT.IN_MAT[156] = true;
+        break;
+    }
 }
