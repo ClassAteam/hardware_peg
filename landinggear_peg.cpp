@@ -59,21 +59,21 @@ landinggear_peg::landinggear_peg(QWidget *parent)
     newColumn();
     createSign("OUT_D");
     //BSS825X6Y
-    createLabelClue(&DEVICE_CONNECT.OUT_D[1][28], "Левая опора - шасси выпущены");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[1][28], "[1][28]");
     //BSS825X6Z
-    createLabelClue(&DEVICE_CONNECT.OUT_D[1][30], "Перед опора - шасси выпущены");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[1][30], "[1][30]");
     //BSS825X6a
-    createLabelClue(&DEVICE_CONNECT.OUT_D[1][32], "Прав опора - шасси выпущены");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[1][32], "[1][32]");
     //BSS824X2X
     createLabelClue(&DEVICE_CONNECT.OUT_D[1][27], "Р ШАССИ НЕ ОТКЛ");
     //BSS824X2Y
     createLabelClue(&DEVICE_CONNECT.OUT_D[1][26], "ШАССИ ВЫПУСТИ");
     //BSS824X2U
-    createLabelClue(&DEVICE_CONNECT.OUT_D[1][29], "Левая опора - не убрана");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[1][29], "[1][29]");
     //BSS824X2W
-    createLabelClue(&DEVICE_CONNECT.OUT_D[1][33], "Правая опора - не убрана");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[1][33], "[1][33]");
     //BSS824X2V
-    createLabelClue(&DEVICE_CONNECT.OUT_D[1][31], "Передняя опора - не убрана");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[1][31], "[1][31]");
     //BSS812X6Y
     createLabelClue(&DEVICE_CONNECT.OUT_D[1][64], "Руление");
 }
