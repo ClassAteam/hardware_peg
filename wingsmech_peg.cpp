@@ -83,9 +83,9 @@ wingsmech_peg::wingsmech_peg(QWidget *parent)
     createLabelClue(&DEVICE_CONNECT.OUT_D[1][66], "25 град закрылки");
     //BSS824X2h
     createLabelClue(&DEVICE_CONNECT.OUT_D[1][67], "40 град закрылки");
-    //BSS825X6E
+    //BSS825X5J
     createLabelClue(&DEVICE_CONNECT.OUT_D[1][65], "ПРЕДКР ВЫПУЩЕНЫ");
-    //BSS913X2h
+    //BSS913X3A
     createLabelClue(&DEVICE_CONNECT.OUT_D[0][114], "20 град крыло");
     //BSS913X2i
     createLabelClue(&DEVICE_CONNECT.OUT_D[0][115], "30 град крыло");

@@ -29,8 +29,10 @@ landinggear_peg::landinggear_peg(QWidget *parent)
     //s4_3250
     createRedButton(&DEVICE_CONNECT.IN_MAT[7], "ПОВОРОТ КОЛЕС РУЛЕНИЕ");
     //s31_3230
-    createRedButton(&DEVICE_CONNECT.IN_MAT[763], "ШАССИ ОТКЛ-ОПОРА ПЕРЕДН-ОПОРА ЛЕВ"
-                                                 "-ОПОРА ПРАВ");
+    createRadioButton(&s31_3230, "ШАССИ ОТКЛ",false);
+    createRadioButton(&s31_3230, "ОПОРА ПЕРЕДН",false);
+    createRadioButton(&s31_3230, "ОПОРА ЛЕВАЯ",false);
+    createRadioButton(&s31_3230, "ОПОРА ПРАВАЯ",true);
     //s55_3230
     createRedButton(&DEVICE_CONNECT.IN_MAT[857], "ИМИТАЦИЯ ШАССИ НЕ ОБЖАТО ОПОРА Л1");
     //s56_3230
@@ -76,6 +78,9 @@ landinggear_peg::landinggear_peg(QWidget *parent)
     createLabelClue(&DEVICE_CONNECT.OUT_D[1][31], "[1][31]");
     //BSS812X6Y
     createLabelClue(&DEVICE_CONNECT.OUT_D[1][64], "Руление");
+    createLabelClue(&DEVICE_CONNECT.OUT_D[1][116], "P МАЛО/АВАР ВЫПУСК");
+    //BSS812X5v
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][64], "60");
 }
 
 void landinggear_peg::updateSmth()
@@ -86,6 +91,21 @@ void landinggear_peg::updateSmth()
     case static_cast<int>(s2_3230::vipusk):DEVICE_CONNECT.IN_MAT[156] = false;
         break;
     case static_cast<int>(s2_3230::uborka):DEVICE_CONNECT.IN_MAT[156] = true;
+        break;
+    }
+    DEVICE_CONNECT.IN_MAT[763] = false;
+    DEVICE_CONNECT.IN_MAT[764] = false;
+    DEVICE_CONNECT.IN_MAT[765] = false;
+    DEVICE_CONNECT.IN_MAT[766] = false;
+    switch(s31_3230)
+    {
+    case static_cast<int>(s31_3230::otkl):DEVICE_CONNECT.IN_MAT[763] = true;
+        break;
+    case static_cast<int>(s31_3230::peredn):DEVICE_CONNECT.IN_MAT[764] = true;
+        break;
+    case static_cast<int>(s31_3230::lev):DEVICE_CONNECT.IN_MAT[765] = true;
+        break;
+    case static_cast<int>(s31_3230::prav):DEVICE_CONNECT.IN_MAT[766] = true;
         break;
     }
 }
