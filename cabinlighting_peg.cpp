@@ -129,10 +129,10 @@ cabinlighting_peg::cabinlighting_peg(QWidget *parent)
 //    createLabelValue(&DEVICE_CONNECT.OUT_D[5][-1], "αФАЗП");
 //    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПФСВ");
 //    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПФСВ");
-//    //BSS825X5V
-//    createLabelClue(&DEVICE_CONNECT.OUT_D[1][36], "фары заправки выпущены");
-//    //BSS824X1E
-//    createLabelClue(&DEVICE_CONNECT.OUT_D[1][34], "фары выпущ");
+    //BSS825X5V
+    createLabelClue(&DEVICE_CONNECT.OUT_D[1][36], "фары заправки выпущены");
+    //BSS824X1E
+    createLabelClue(&DEVICE_CONNECT.OUT_D[1][34], "фары выпущ");
 //    //BSS824X1A
 //    createLabelClue(&DEVICE_CONNECT.OUT_D[1][35], "свет посадоч");
 //    createLabelClue(&DEVICE_CONNECT.OUT_D[5][-1], "ПВ_ОСН_ХВ_10");

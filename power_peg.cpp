@@ -36,6 +36,8 @@ power_peg::power_peg(QWidget *parent)
     createRedButton(&DEVICE_CONNECT.IN_MAT[531], "Г1");
     //s5_2430
     createRedButton(&DEVICE_CONNECT.IN_MAT[535], "Г2");
+    //s6_2430
+    createRedButton(&DEVICE_CONNECT.IN_MAT[553], "Разделение сетей");
     //s8_2430
     createRedButton(&DEVICE_CONNECT.IN_MAT[543], "Г3");
     //s11_2430
@@ -268,6 +270,8 @@ power_peg::power_peg(QWidget *parent)
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][10], "ПРЕОБР 3 ПРАВАЯ (ШИНА 6 АПШ)");
     //BSS837X2F
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][7], "ПРЕОБР 1 (ШИНА 3 АПШ)");
+    //BSS926X3H
+    createLabelClue(&DEVICE_CONNECT.OUT_D[2][29], "СЕТИ РАЗДЕЛЕНЫ");
 }
 
 void power_peg::updateSmth()

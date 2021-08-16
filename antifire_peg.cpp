@@ -5,7 +5,18 @@ antifire_peg::antifire_peg(QWidget *parent)
 {
     antifire_peg::setWindowTitle("antifire");
     createSign("ISU");
+    //EZR1
+    createRedButton(&ISU_CONNECT.ezr_23sku1_vikl_dv1,
+                    "признак сигнала из СКУ1дв");
+    createRedButton(&ISU_CONNECT.ezr_23sku2_vikl_dv2,
+                    "признак сигнала из СКУ2дв");
+    createRedButton(&ISU_CONNECT.ezr_23sku3_vikl_dv3,
+                    "признак сигнала из СКУ3дв");
+    createRedButton(&ISU_CONNECT.ezr_23sku4_vikl_dv4,
+                    "признак сигнала из СКУ4дв");
 
+    newColumn();
+    createSign("SIO");
     //s3_2610
     createRedButton(&DEVICE_CONNECT.IN_MAT[289], "ДВ1");
     //s4_2610
@@ -127,6 +138,22 @@ antifire_peg::antifire_peg(QWidget *parent)
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][81], "ОЧ2");
     //BSS926X2T
     createLabelClue(&DEVICE_CONNECT.OUT_D[2][82], "ОЧ3");
+    //BSS825X5f
+    createLabelClue(&DEVICE_CONNECT.OUT_D[1][72], "Стоп-кран1");
+    //BSS825X5h
+    createLabelClue(&DEVICE_CONNECT.OUT_D[1][73], "Стоп-кран2");
+    //BSS825X5j
+    createLabelClue(&DEVICE_CONNECT.OUT_D[1][74], "Стоп-кран3");
+    //BSS825X5n
+    createLabelClue(&DEVICE_CONNECT.OUT_D[1][75], "Стоп-кран4");
+    //BSS913X1A
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][27], "ДВ1 ВЫКЛЮЧИ");
+    //BSS913X1R
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][34], "ДВ2 ВЫКЛЮЧИ");
+    //BSS913X1f
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][41], "ДВ3 ВЫКЛЮЧИ");
+    //BSS913X1v
+    createLabelClue(&DEVICE_CONNECT.OUT_D[0][41], "ДВ4 ВЫКЛЮЧИ");
 }
 
 void antifire_peg::updateSmth()
