@@ -12,6 +12,7 @@ SOURCES += \
     aircondition_peg.cpp \
     antifire_peg.cpp \
     antiicing_peg.cpp \
+    bailout_peg.cpp \
     brakes_peg.cpp \
     cabinlighting_peg.cpp \
     hydro_peg.cpp \
@@ -33,6 +34,7 @@ HEADERS += \
     aircondition_peg.h \
     antifire_peg.h \
     antiicing_peg.h \
+    bailout_peg.h \
     brakes_peg.h \
     cabinlighting_peg.h \
     hydro_peg.h \

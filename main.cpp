@@ -11,8 +11,7 @@
 #include "cabinlighting_peg.h"
 #include "aircondition_peg.h"
 #include "sas_peg.h"
-
-
+#include "bailout_peg.h"
 
 int main(int argc, char *argv[])
 {
@@ -47,6 +46,8 @@ int main(int argc, char *argv[])
     aircondition.showMinimized();
     sas_peg sas;
     sas.showMinimized();
+    bailout_peg bailout;
+    bailout.showMinimized();
 
     return a.exec();
 }
