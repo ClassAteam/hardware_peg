@@ -15,6 +15,7 @@ SOURCES += \
     bailout_peg.cpp \
     brakes_peg.cpp \
     cabinlighting_peg.cpp \
+    fake_in.cpp \
     hydro_peg.cpp \
     interfacing.cpp \
     landinggear_peg.cpp \
@@ -37,6 +38,7 @@ HEADERS += \
     bailout_peg.h \
     brakes_peg.h \
     cabinlighting_peg.h \
+    fake_in.h \
     hydro_peg.h \
     interfacing.h \
     landinggear_peg.h \

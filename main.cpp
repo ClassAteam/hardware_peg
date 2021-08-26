@@ -12,12 +12,16 @@
 #include "aircondition_peg.h"
 #include "sas_peg.h"
 #include "bailout_peg.h"
+#include "fake_in.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+    fake_in fake_in;
+    fake_in.show();
     power_peg power;
     power.show();
+    power.showMinimized();
     antifire_peg antifire;
     antifire.show();
     antifire.showMinimized();
