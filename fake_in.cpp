@@ -11,6 +11,8 @@ fake_in::fake_in(QWidget *parent)
     createSlider(&ISU_CONNECT.planePosX, -3000, 3000);
     createLabelValue(&ISU_CONNECT.planePosY, "Plane Position's Y");
     createSlider(&ISU_CONNECT.planePosY, -3000, 3000);
+    createLabelValue(&ISU_CONNECT.planePosZ, "Plane Position's Z");
+    createSlider(&ISU_CONNECT.planePosZ, 0.0, 3000);
 }
 
 void fake_in::updateSmth()

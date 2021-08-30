@@ -31,7 +31,7 @@ interfacing::interfacing(QWidget *parent)
 
     //second ver
     int screenCount = QApplication::desktop()->screenCount();
-    QRect screenRect = QApplication::desktop()->screenGeometry(1);
+    QRect screenRect = QApplication::desktop()->screenGeometry(0);
     this->move(QPoint(screenRect.x(), screenRect.y()));
 
     //old ver
