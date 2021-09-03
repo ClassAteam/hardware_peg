@@ -107,6 +107,7 @@ public slots:
     void createSign(QString name);
     void createLabelValue(double* clue, QString name);
     void createSlider(double* variable, int low_val, int high_val);
+    void createSlider(double* variable, int low_val, int high_val, int width);
     void m_RedButton2(int);
     void setLbl();
     void setSlV(int);

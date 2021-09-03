@@ -164,6 +164,22 @@ void interfacing::createSlider(double* variable, int low_val, int high_val)
     slID++;
     slPool.append(slider);
 }
+void interfacing::createSlider(double* variable, int low_val, int high_val,
+                               int width)
+{
+    QSlider *slider = new QSlider(Qt::Horizontal);
+    slider->setRange(low_val, high_val);
+    slider->setPageStep(1);
+    slider->setValue(0);
+    slider->setFixedWidth(width);
+    layout_buttons->addWidget(slider, row, column);
+    posOcupied();
+    signalMapperSldrs->setMapping(slider, slID);
+    connect(slider, SIGNAL(valueChanged(int)), signalMapperSldrs, SLOT(map()));
+    slValues.append(variable);
+    slID++;
+    slPool.append(slider);
+}
 void interfacing::createRadioButton(int* toggler, QString name, bool isLastInGrp)
 {
     QRadioButton* rbutton = new QRadioButton(name, this);
