@@ -98,9 +98,9 @@ struct SH_ISU
     double freq;//частота установленная в вычислителе
     double NorthAngle;//фактический азимут
     //позиция в пространстве ЛА
-    double planePosX;
-    double planePosY;
-    double planePosZ;
+    double planePosX;//lefthanded plane. Pointer finger
+    double planePosY;//lefthanded plane. Midle finger
+    double planePosZ;//lefthanded plane. Thumb
 
 
 };
