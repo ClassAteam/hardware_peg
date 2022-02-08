@@ -30,16 +30,16 @@ interfacing::interfacing(QWidget *parent)
 
 
     //second ver
-    int screenCount = QApplication::desktop()->screenCount();
-    QRect screenRect = QApplication::desktop()->screenGeometry(0);
-    this->move(QPoint(screenRect.x(), screenRect.y()));
+//    int screenCount = QApplication::desktop()->screenCount();
+//    QRect screenRect = QApplication::desktop()->screenGeometry(0);
+//    this->move(QPoint(screenRect.x(), screenRect.y()));
 
     //old ver
-//    QScreen *screen = QGuiApplication::primaryScreen();
-//    QRect screenGeometry = screen->geometry();
-//    this->setFixedHeight(screenGeometry.height());
-//    this->setFixedWidth(screenGeometry.width());
-//    this->setWindowState(Qt::WindowFullScreen);
+    QScreen *screen = QGuiApplication::primaryScreen();
+    QRect screenGeometry = screen->geometry();
+    this->setFixedHeight(screenGeometry.height());
+    this->setFixedWidth(screenGeometry.width());
+    this->setWindowState(Qt::WindowFullScreen);
     //fonts
     btnFont = new QFont("Courier", 12, QFont::Bold);
     lblClueFontAct = new QFont("Time", 8, QFont::Bold);
@@ -61,8 +61,8 @@ interfacing::interfacing(QWidget *parent)
     QButtonGroup* firstgroup = new QButtonGroup;
     rbGrPool.append(firstgroup);
     signalMapperRbtns = new QSignalMapper(this);
-    connect(signalMapperRbtns, SIGNAL(mapped(const QString)), this, SIGNAL(rbClicked(const QString)));
-    connect(this, SIGNAL(rbClicked(const QString)), this, SLOT(setRB(const QString)));
+    connect(signalMapperRbtns, SIGNAL(mapped(QString)), this, SIGNAL(rbClicked(const QString)));
+    connect(this, SIGNAL(rbClicked(QString)), this, SLOT(setRB(const QString)));
 //    this->setStyleSheet("QLabel {color: green}"); //would be very expensive
 
     if(mmrDevCount == 0)

@@ -1,6 +1,6 @@
 #include "power_peg.h"
 
-#include <QTextCodec>
+//#include <QTextCodec>
 #include <unistd.h>
 #include <string.h>
 #include <stdio.h>
