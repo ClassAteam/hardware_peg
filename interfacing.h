@@ -41,6 +41,7 @@ class interfacing : public QWidget
     Q_OBJECT
 public:
     interfacing(QWidget *parent = nullptr);
+    ~interfacing();
 
 public:
     QFont *btnFont;

@@ -20,6 +20,7 @@ SOURCES += \
     interfacing.cpp \
     landinggear_peg.cpp \
     main.cpp \
+    mainwindow.cpp \
     pneumo_peg.cpp \
     power_peg.cpp \
     presure_peg.cpp \
@@ -42,6 +43,7 @@ HEADERS += \
     hydro_peg.h \
     interfacing.h \
     landinggear_peg.h \
+    mainwindow.h \
     pneumo_peg.h \
     power_peg.h \
     presure_peg.h \
@@ -52,3 +54,6 @@ HEADERS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+FORMS += \
+    mainwindow.ui
